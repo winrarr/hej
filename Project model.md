@@ -18,7 +18,7 @@
 
 # **Development** - Development happens in cycles for each unit. Each sprint is also development
 #### Goal & Focus: Develop the website according to the specified design
-#### Organize
+* Organize
 * Implementation
 * Unit testing
 * System testing
