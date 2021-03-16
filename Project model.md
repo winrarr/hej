@@ -1,6 +1,6 @@
 # Project model
 
-### **Preparation**
+# **Preparation**
 #### Goal & Focus: *Set up essentials for the project*
 * Make the project model
 * Make the time table
@@ -8,7 +8,7 @@
 * Set up the virtual machine
 #### Conditions for proceeding: *Preparation is in order*
 
-### **Research**
+# **Research**
 #### Goal & Focus: *Find participants and collect their input in a systematic way for later analysis*
 * GDPR
 * Case Study
