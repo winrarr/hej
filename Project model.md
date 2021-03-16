@@ -1,23 +1,29 @@
 # Project model
 
+### **Preparation**
+#### Goal & Focus: *Set up essentials for the project*
+* Make the project model
+* Make the time table
+* Find participants
+* Set up the virtual machine
+#### Conditions for proceeding: *Preparation is in order*
+
 ### **Research**
-#### *Goal & Focus: Find participants and collect their input in a systematic way for later analysis*
-#### *Primary activities: Finding participants, input collection, documentation*
-* Find Participants & GDPR
+#### Goal & Focus: *Find participants and collect their input in a systematic way for later analysis*
+* GDPR
 * Case Study
 * Future workshop
-#### Conditions for proceeding: *Participants and their info is collected and documented.*
+#### Conditions for proceeding: *Participants and their info is collected and documented*
 
 # **Analysis**
-#### *Goal & Focus: Find out how the website should be structured based on the research*
-#### *Primary activities: Analysis, requirements, preliminary design*
+#### Goal & Focus: *Find out how the website should be structured based on the research*
 * Analysis of Case Study and Future Workshop
 * System requirements based on analysis
 * Preliminary design
 #### Conditions for proceeding: *Website structure is documented and analysed thoroughly*
 
 # **Development** - Development happens in cycles for each unit. Each sprint is also development
-#### Goal & Focus: Develop the website according to the specified design
+#### Goal & Focus: *Develop the website according to the specified design*
 * Organize
 * Implementation
 * Unit testing
