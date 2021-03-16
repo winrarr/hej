@@ -16,7 +16,7 @@
 * Preliminary design
 #### *Conditions for proceeding: Website structure is documented and analysed thoroughly*
 
-### **Development** - Development happens in cycles for each unit. Each sprint is also development
+# **Development** - Development happens in cycles for each unit. Each sprint is also development
 #### Goal & Focus: Develop the website according to the specified design
 #### Organize
 * Implementation
@@ -24,7 +24,7 @@
 * System testing
 #### *Conditions for proceeding: The goals for a particular sprint has been met*
 
-#### **Evaluation** Each sprint should have its own evaluation
+# **Evaluation** Each sprint should have its own evaluation
 #### Goal & Focus: *Evaluate the product and process in order to learn from mistakes and find potential flaws. Documentation of thought processes too.*
 * Documentation
 * Process review
