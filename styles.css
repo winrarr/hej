@@ -1,3 +1,77 @@
+:root {
+    --navpadding: 2px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color:brown;
+}
+
+.navbar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    display: flex;
+    align-items: center;
+    background-color:forestgreen;
+}
+
+.test {
+    margin: var(--navpadding);
+    cursor: pointer;
+}
+
+.test:hover {
+    filter: brightness(1.3);
+    transition: all 0.2s ease 0s;
+}
+
+.logo {
+    background-color: darkolivegreen;
+    margin: 0px;
+}
+
+.course-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.course-items img {
+    margin: var(--navpadding);
+    width: 30px;
+    margin-right: 5px;
+}
+
+.course-items li {
+    padding: var(--navpadding);
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.course-items li a {
+    max-width: 150px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile {
+    margin: auto 0 auto auto;
+    padding: var(--navpadding);
+}
+
+.burger-dropdown {
+    padding: 0px;
+    margin: 0px;
+}
+
 footer {
     text-align: center;
     background-color: rgb(30, 35, 41);
@@ -13,3 +87,4 @@ footer a {
     color:rgb(159, 173, 194);
     font-size: 30px; 
 }
+
