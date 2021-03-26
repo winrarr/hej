@@ -71,3 +71,20 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+footer {
+    text-align: center;
+    background-color: rgb(30, 35, 41);
+    display: flex;
+    align-items: center;
+  }
+
+.footeritem {
+    flex-grow: 5;
+}
+
+footer a {
+    color:rgb(159, 173, 194);
+    font-size: 30px; 
+}
+
