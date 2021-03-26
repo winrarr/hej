@@ -31,7 +31,7 @@ body {
 }
 
 .assignment-element:hover{
-    background-color: rgb(167, 196, 196);
+    filter: brightness(0.9);
 }
 
 .assignment-text {
