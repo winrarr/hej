@@ -77,19 +77,48 @@ body {
 }
 
 
+/* CALENDER */
+
+.calendardiv {
+    margin: 20px;
+}
+
+.calendarheader {
+    display: flex;
+}
+
+.calendarleft {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.calendarright {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+#lol {
+    width:100%;
+}
+
+
+
+
 
 /* INFO BOXES */
 
 #infoboxes {
     text-align: center;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
     align-items: center;
 }
 
 .box {
     margin: 20px;
     border: 2px solid red;
+    flex: 1;    
 }
 
 .boxtitle {
@@ -134,7 +163,7 @@ footer {
   }
 
 .footeritem {
-    flex-grow: 5;
+    flex: 5;
 }
 
 footer a {
