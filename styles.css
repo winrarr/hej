@@ -1,1 +1,10 @@
-.test p, h1{color: red}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: grey;
+    color: white;
+    display: flex;
+  }
+  .flex-item{
+    flex-grow: 5;
+}
