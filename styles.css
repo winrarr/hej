@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --navpadding: 2px;
 }
@@ -72,6 +73,62 @@ body {
     margin: 0px;
 }
 
+=======
+body {
+    background-color: rgb(204, 204, 204);
+}
+
+
+
+/* INFO BOXES */
+
+#infoboxes {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.box {
+    margin: 20px;
+    border: 2px solid red;
+}
+
+.boxtitle {
+    font-size: xx-large;
+}
+
+.assignment-element {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid blue;
+    background-color: rgb(191, 216, 216);
+}
+
+.assignment-element:hover{
+    filter: brightness(0.9);
+}
+
+.assignment-text {
+    flex-grow: 3;
+    text-align: left;
+    display: block;
+}
+
+.assignment-element p{
+    margin: 7px;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+>>>>>>> infoboxes
 footer {
     text-align: center;
     background-color: rgb(30, 35, 41);
