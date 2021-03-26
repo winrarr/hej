@@ -1,10 +1,15 @@
 footer {
     text-align: center;
-    padding: 3px;
-    background-color: grey;
-    color: white;
+    background-color: rgb(30, 35, 41);
     display: flex;
+    align-items: center;
   }
-  .flex-item{
+
+.footeritem {
     flex-grow: 5;
+}
+
+footer a {
+    color:rgb(159, 173, 194);
+    font-size: 30px; 
 }
