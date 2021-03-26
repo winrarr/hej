@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>      
@@ -45,21 +46,30 @@
         </div>
     </div>
     
-    <div class="calendardiv">
-        <div class="calendarheader">
-            <div class="calendarleft">
-                <div><button>left</button></div>
-                <div><input     type="date"></div>
-                <div><button>right</button></div>
+    <div class="calendar-div">
+        <div class="calendar-header">
+            <div class="calendar-left">
+                <div onclick="previousWeek()" class="week-changer">Sidste uge</div>
+                <div>
+                    <input type="date" class="date-picker">
+                </div>
+                <div onclick="nextWeek()" class="week-changer">Næste uge</div>
             </div>
-            <div class="calendarright">
+            <div class="calendar-right">
                 <div><button>Wek</button></div>
                 <div><button>Motn</button></div>
                 <div><button>Semsester</button></div>
             </div>
         </div>
-        <div class="calendar">
-            <input id="lol" type="date"></div>
+        <div id="calendar" class="calendar">
+            <div class="calendar-table-header">UGE 12</div>
+            <div class="calendar-table-header">MANDAG 22</div>
+            <div class="calendar-table-header">TIRDAG 23</div>
+            <div class="calendar-table-header">TORDAG 24</div>
+            <div class="calendar-table-header">ONSDAG 25</div>
+            <div class="calendar-table-header">FREDAG 26</div>
+            <div class="calendar-table-header">LØRDAG 27</div>
+            <div class="calendar-table-header">SØNDAG 28</div>
         </div>
     </div>
 

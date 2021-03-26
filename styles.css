@@ -1,11 +1,18 @@
 :root {
     --navpadding: 2px;
+    --arrow-scale: 0.8;
+    --schedule-dark: rgb(20, 55, 25);
+    --schedule-light: rgb(52, 145, 66);
 }
 
 body {
+    text-align: center;
     margin: 0px;
-    padding: 0px;
-    background-color:brown;
+    background-color: rgb(204, 204, 204);
+}
+
+div {
+    font-family: "AU Passata",sans-serif;
 }
 
 .navbar {
@@ -72,38 +79,92 @@ body {
     margin: 0px;
 }
 
-body {
-    background-color: rgb(204, 204, 204);
-}
 
+/* CALENDAR */
 
-/* CALENDER */
-
-.calendardiv {
+.calendar-div {
     margin: 20px;
 }
 
-.calendarheader {
+.calendar-header {
     display: flex;
+    justify-content: flex-end;
+    margin: 5px;
 }
 
-.calendarleft {
+.calendar-left {
     display: flex;
+    align-self: flex-end;
     align-items: center;
     flex: 1;
 }
 
-.calendarright {
+.calendar-right {
     display: flex;
+    align-self: flex-end;
     justify-content: flex-end;
     flex: 1;
 }
 
-#lol {
-    width:100%;
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(24, 1fr);
 }
 
+.week-changer {
+    align-self: flex-end;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: var(--schedule-light);
+    color: black;
+}
 
+.week-changer:hover {
+    background-color: rgb(46, 128, 57);
+}
+
+.date-picker {
+    align-self: flex-end;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    font-family: "AU Passata",sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--schedule-light);
+    color: black;
+}
+
+.calendar-table-item {
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(180, 180, 180);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.calendar-table-header {
+    border: 1px solid rgb(204, 204, 204);
+    font-family: "AU Passata",sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    background-color: var(--schedule-dark);
+}
+
+.calendar-table-row-header-today {
+    border: 1px solid rgb(204, 204, 204);
+    font-family: "AU Passata",sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    background-color: var(--schedule-light);
+}
 
 
 
@@ -170,4 +231,3 @@ footer a {
     color:rgb(159, 173, 194);
     font-size: 30px; 
 }
-
