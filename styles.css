@@ -16,19 +16,14 @@ body {
     background-color:forestgreen;
 }
 
-.test {
+.logo {
     margin: var(--navpadding);
     cursor: pointer;
 }
 
-.test:hover {
+.logo:hover {
     filter: brightness(1.3);
     transition: all 0.2s ease 0s;
-}
-
-.logo {
-    background-color: darkolivegreen;
-    margin: 0px;
 }
 
 .course-items {
@@ -48,15 +43,21 @@ body {
     padding: var(--navpadding);
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    margin: 5px;
     border: 2px solid black;
+    cursor: pointer;
+    background-color: goldenrod;
 }
 
-.course-items li a {
+.course-items li:hover {
+    filter: brightness(0.9);
+}
+
+.course-items li p {
     max-width: 150px;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
