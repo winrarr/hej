@@ -58,7 +58,8 @@
     </div>
     <script>
         function scrollWin(){
-            window.scrollTo(0,500);
+            var myelement = document.getElementById("infoboxes");
+            myelement.scrollIntoView({behavior:"smooth"});
         }
     </script>
     <p>IGNORE</p>
