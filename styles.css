@@ -118,6 +118,10 @@ body {
     height: 50px;
 }
 
+.scrollbutton img {
+    height: 100%;
+}
+
 /* INFO BOXES */
 
 #infoboxes {
@@ -125,6 +129,7 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
+    margin: 10px;
 }
 
 .box {
@@ -132,6 +137,10 @@ body {
     border: 2px solid rgb(43, 43, 43);
     background-color: rgb(108, 134, 108);
     border-radius: 10px;
+    padding: 5px;
+    height: 85vh;
+    display: grid;
+    grid-template-rows: 10% 75% 15%;
 }
 
 .boxtitle {
@@ -144,9 +153,10 @@ body {
     cursor: pointer;
     display: grid;
     align-items: center;
-    border: 2px solid  rgb(64, 88, 64);;
+    border: 2px solid  rgb(64, 88, 64);
     background-color:  rgb(149, 179, 149);
     border-radius: 10px;
+    height: 15%;
 }
 
 .assignment-element:hover, .announcement-element:hover{
@@ -154,11 +164,11 @@ body {
 }
 
 .announcement-element {
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
 }
 
 .assignment-element{
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 40% 35% 25%;
 }
 
 .infobox-text {
@@ -181,6 +191,7 @@ body {
 .infobox-button {
     background-color: rgb(149, 179, 149);
     border-radius: 10px;
+    border: 2px solid  rgb(64, 88, 64);
 }
 
 
