@@ -15,35 +15,59 @@ body {
 
 .box {
     margin: 20px;
-    border: 2px solid red;
+    border: 2px solid rgb(43, 43, 43);
+    background-color: rgb(108, 134, 108);
+    border-radius: 10px;
 }
 
 .boxtitle {
     font-size: xx-large;
 }
 
-.assignment-element {
+
+
+.announcement-element, .assignment-element {
     cursor: pointer;
-    display: flex;
+    display: grid;
     align-items: center;
-    border: 2px solid blue;
-    background-color: rgb(191, 216, 216);
+    border: 2px solid  rgb(64, 88, 64);;
+    background-color:  rgb(149, 179, 149);
+    border-radius: 10px;
 }
 
-.assignment-element:hover{
+.assignment-element:hover, .announcement-element:hover{
     filter: brightness(0.9);
 }
 
-.assignment-text {
+.announcement-element {
+    grid-template-columns: 70% 30%;
+}
+
+.assignment-element{
+    grid-template-columns: 50% 25% 25%;
+}
+
+.infobox-text {
     flex-grow: 3;
     text-align: left;
-    display: block;
 }
 
-.assignment-element p{
-    margin: 7px;
+.infobox-text2 {
+    text-align: right;
 }
 
+.box p{
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.infobox-button {
+    background-color: rgb(149, 179, 149);
+    border-radius: 10px;
+}
 
 
 
