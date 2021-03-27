@@ -33,17 +33,10 @@ body {
     padding: 0px;
 }
 
-.course-items img {
-    margin: var(--navpadding);
-    width: 30px;
-    margin-right: 5px;
-}
-
 .course-items li {
-    padding: var(--navpadding);
-    display: flex;
     align-items: center;
     margin: 5px;
+    padding: 5px;
     border: 2px solid black;
     cursor: pointer;
     background-color: goldenrod;
@@ -57,8 +50,8 @@ body {
 .course-items li p {
     max-width: 150px;
     text-decoration: none;
-    color: white;
     font-size: 18px;
+    margin: 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -116,10 +109,17 @@ body {
     text-align: center;
     border-radius: 50%;
     height: 50px;
+    width: 50px;
+    border: 2px solid black;
 }
 
-.scrollbutton img {
-    height: 100%;
+.arrowdown {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 /* INFO BOXES */
