@@ -76,7 +76,19 @@ body {
     background-color: rgb(204, 204, 204);
 }
 
+/* SCROLLBUTTON */
 
+#scroll-button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.scrollbutton {
+    text-align: center;
+    border-radius: 50%;
+    height: 50px;
+}
 
 /* INFO BOXES */
 
