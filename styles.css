@@ -16,6 +16,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color:var(--colorbck);
+    font-family: Tahoma, sans-serif;
 }
 
 
@@ -26,6 +27,7 @@ body {
     align-items: center;
     background-color: var(--colordark);
     top: 0;
+    z-index: 1;
 }
 
 .logo {
@@ -144,7 +146,6 @@ body {
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
 
 /* INFO BOXES */
@@ -163,9 +164,9 @@ body {
     background-color: var(--colormedium);
     border-radius: 10px;
     padding: 5px;
-    height: 85vh;
+    height: 84vh;
     display: grid;
-    grid-template-rows: 10% 75% 15%;
+    grid-template-rows: 10% 80% 10%;
 }
 
 .boxtitle {
@@ -257,5 +258,5 @@ footer {
 
 footer a {
     color:rgb(159, 173, 194);
-    font-size: 30px; 
+    font-size: 25px; 
 }
