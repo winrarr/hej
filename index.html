@@ -14,13 +14,13 @@
         </div>
     
         <ul class="course-items">
-            <li id="course1" onclick="alert('Goto Course1');">
+            <li class="course1" onclick="alert('Goto Course1');">
                 <p>Computerarkitektur, Netværk og Operativsystemer</p>
             </li>
-            <li id="course2" onclick="alert('Goto Course2');">
+            <li class="course2" onclick="alert('Goto Course2');">
                 <p>Numerisk Lineær Algebra</p>
             </li>
-            <li id="course3" onclick="alert('Goto Course3');">
+            <li class="course3" onclick="alert('Goto Course3');">
                 <p>Eksperimentel Systemudvikling</p>
             </li>
             
@@ -29,25 +29,11 @@
         <div class="profile">
             <img src="img/menu.png">
             <div class="burger-dropdown">
-                <div class="profile">
-                    <button onclick="alert('Goto Profile');">Profile</button>
-                </div>
-
-                <div class="post">
-                    <button onclick="alert('Goto Post');">Post</button>
-                </div>
-                
-                <div class="all-courses">
-                    <button onclick="alert('Goto All Courses');">Courses</button>
-                </div>
-
-                <div class="settings">
-                    <button onclick="alert('Goto Settings');">Settings</button>
-                </div>
-                
-                <div class="log-out">
-                    <button onclick="alert('Log Out of the website');">Log Out</button>
-                </div>
+                <button onclick="alert('Goto Profile');">Profile</button>
+                <button onclick="alert('Goto Post');">Post</button>
+                <button onclick="alert('Goto All Courses');">Courses</button>
+                <button onclick="alert('Goto Settings');">Settings</button>
+                <button onclick="alert('Log Out of the website');">Log Out</button>
             </div>
         </div>
     </div>
@@ -56,7 +42,7 @@
         <div class="calendar-header">
             <ul class="horizontal-list calendar-header-left">
                 <li onclick="previousWeek()" class="week-changer">Sidste uge</li>
-                <li><input type="date" class="date-picker"></li>
+                <li><input type="date" class="week-changer date-picker"></li>
                 <li onclick="nextWeek()" class="week-changer">Næste uge</li>
             </ul>
             <ul class="horizontal-list calendar-header-right">
@@ -130,49 +116,49 @@
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course2"></span>
                     <p class="infobox-text">Assignment 1</p>
-                    <p class="infobox-text2">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">Today 18:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course1"></span>
                     <p class="infobox-text">Digital Logic Level</p>
-                    <p class="infobox-text2">Computerarkitektur, Netværk og Operativsystemer</p>
+                    <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
                     <p class="infobox-text2">Tomorrow 16:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course3"></span>
                     <p class="infobox-text">Artifact Ecology</p>
-                    <p class="infobox-text2">Eksperimentel Systemudvikling</p>
+                    <p class="infobox-text">Eksperimentel Systemudvikling</p>
                     <p class="infobox-text2">25/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course2"></span>
                     <p class="infobox-text">Assignment 2</p>
-                    <p class="infobox-text2">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">27/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course1"></span>
                     <p class="infobox-text">Microarchitecture</p>
-                    <p class="infobox-text2">Computerarkitektur, Netværk og Operativsystemer</p>
+                    <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
                     <p class="infobox-text2">30/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course3"></span>
                     <p class="infobox-text">Case Study</p>
-                    <p class="infobox-text2">Eksperimentel Systemudvikling</p>
+                    <p class="infobox-text">Eksperimentel Systemudvikling</p>
                     <p class="infobox-text2">02/06/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course2"></span>
                     <p class="infobox-text">Assignment 3</p>
-                    <p class="infobox-text2">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">25/07/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
                     <span class="dot course2"></span>
                     <p class="infobox-text">Assignment 4</p>
-                    <p class="infobox-text2">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">28/07/2021</p>
                 </div>
             </div>
