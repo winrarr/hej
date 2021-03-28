@@ -48,20 +48,18 @@
     
     <div class="calendar-div">
         <div class="calendar-header">
-            <div class="calendar-left">
-                <div onclick="previousWeek()" class="week-changer">Sidste uge</div>
-                <div>
-                    <input type="date" class="date-picker">
-                </div>
-                <div onclick="nextWeek()" class="week-changer">Næste uge</div>
-            </div>
-            <div class="calendar-right">
-                <div><button>Wek</button></div>
-                <div><button>Motn</button></div>
-                <div><button>Semsester</button></div>
-            </div>
+            <ul class="horizontal-list calendar-header-left">
+                <li onclick="previousWeek()" class="week-changer">Sidste uge</li>
+                <li><input type="date" class="date-picker"></li>
+                <li onclick="nextWeek()" class="week-changer">Næste uge</li>
+            </ul>
+            <ul class="horizontal-list calendar-header-right">
+                <li id="week-button" class="active-button" onclick="setActiveButton(this)">Wek</li>
+                <li id="month-button" onclick="setActiveButton(this)">Motn</li>
+                <li id="semester-button" onclick="setActiveButton(this)">Semsester</li>
+            </ul>
         </div>
-        <div id="calendar" class="calendar">
+        <div id="calendar" class="calendar-table">
             <div class="calendar-table-header">UGE 12</div>
             <div class="calendar-table-header">MANDAG 22</div>
             <div class="calendar-table-header">TIRDAG 23</div>

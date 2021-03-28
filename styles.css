@@ -3,6 +3,7 @@
     --arrow-scale: 0.8;
     --schedule-dark: rgb(20, 55, 25);
     --schedule-light: rgb(52, 145, 66);
+    --schedule-button-shadow: rgb(40, 109, 50);
 }
 
 body {
@@ -80,54 +81,58 @@ div {
 }
 
 
-/* CALENDAR */
+/* CALENDAR HEAD */
 
 .calendar-div {
-    margin: 20px;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .calendar-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.calendar-header ul {
     margin: 5px;
 }
 
-.calendar-left {
-    display: flex;
+.calendar-header li {
     align-self: flex-end;
-    align-items: center;
-    flex: 1;
 }
 
-.calendar-right {
+.horizontal-list li {
+	display: inline;
+}
+
+.calendar-header-left {
+    padding-left: 0px;
     display: flex;
-    align-self: flex-end;
-    justify-content: flex-end;
-    flex: 1;
+}
+
+.calendar-header-right {
+    display: flex;
 }
 
 
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(24, 1fr);
-}
+/* LEFT */
 
 .week-changer {
-    align-self: flex-end;
-    padding: 5px;
+    padding: 7px;
     border-radius: 3px;
-    cursor: pointer;
+    cursor: default; 
+    font-weight: bold;
     background-color: var(--schedule-light);
     color: black;
 }
 
 .week-changer:hover {
-    background-color: rgb(46, 128, 57);
+    filter: brightness(0.9);
 }
 
 .date-picker {
-    align-self: flex-end;
+    font-weight: bold;
     padding: 5px;
     border-radius: 3px;
     border: none;
@@ -137,6 +142,59 @@ div {
     margin-right: 10px;
     background-color: var(--schedule-light);
     color: black;
+}
+
+
+/* RIGHT */
+
+.calendar-header-right li {
+    padding: 5px;
+    margin-left: 1px;
+    cursor: default; 
+    font-weight: bold;
+}
+
+.calendar-header-right li:hover {
+    filter: brightness(0.9);
+}
+
+.calendar-header-right #week-button {
+    background-color: var(--schedule-light);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.calendar-header-right #month-button {
+    background-color: var(--schedule-light);
+}
+
+.calendar-header-right #semester-button {
+    background-color:  var(--schedule-light);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.active-button {
+    box-shadow: inset 0px 3px var(--schedule-button-shadow);
+}
+
+.calendar-right div {
+    font-weight: bold;
+    background-color: var(--schedule-light);
+    padding: 5px;
+    margin-left: 1px;
+}
+
+.time-range-buttons:active {
+    background-color: var(--schedule-dark);
+}
+
+/* CALENDAR TABLE */
+
+.calendar-table {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    grid-template-rows: repeat(24, 1fr);
 }
 
 .calendar-table-item {
@@ -165,7 +223,6 @@ div {
     color: rgb(204, 204, 204);
     background-color: var(--schedule-light);
 }
-
 
 
 /* INFO BOXES */
@@ -207,11 +264,6 @@ div {
 .assignment-element p{
     margin: 7px;
 }
-
-
-
-
-
 
 
 /* Footer */
