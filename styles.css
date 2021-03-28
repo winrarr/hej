@@ -10,9 +10,6 @@
     --colorborderdark: rgb(47, 47, 105);
     --colorbordermedium: rgb(113, 147, 165);
     --colorborderlight: rgb(106, 129, 158);
-    --schedule-dark: rgb(20, 55, 25);
-    --schedule-light: rgb(52, 145, 66);
-    --schedule-button-shadow: rgb(40, 109, 50);
 }
 
 body {
@@ -167,7 +164,7 @@ body {
     border-radius: 3px;
     cursor: default; 
     font-weight: bold;
-    background-color: var(--schedule-light);
+    background-color: var(--colorlight);
     color: black;
 }
 
@@ -184,7 +181,7 @@ body {
     font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: var(--schedule-light);
+    background-color: var(--colorlight);
     color: black;
 }
 
@@ -203,34 +200,34 @@ body {
 }
 
 .calendar-header-right #week-button {
-    background-color: var(--schedule-light);
+    background-color: var(--colorlight);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
 .calendar-header-right #month-button {
-    background-color: var(--schedule-light);
+    background-color: var(--colorlight);
 }
 
 .calendar-header-right #semester-button {
-    background-color:  var(--schedule-light);
+    background-color:  var(--colorlight);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
 
 .active-button {
-    box-shadow: inset 0px 3px var(--schedule-button-shadow);
+    box-shadow: inset 0px 3px var(--colorborderlight);
 }
 
 .calendar-right div {
     font-weight: bold;
-    background-color: var(--schedule-light);
+    background-color: var(--colorlight);
     padding: 5px;
     margin-left: 1px;
 }
 
 .time-range-buttons:active {
-    background-color: var(--schedule-dark);
+    background-color: var(--colordark);
 }
 
 /* CALENDAR TABLE */
@@ -256,7 +253,7 @@ body {
     padding: 10px;
     text-align: center;
     color: rgb(204, 204, 204);
-    background-color: var(--schedule-dark);
+    background-color: var(--colordark);
 }
 
 .calendar-table-row-header-today {
@@ -266,7 +263,7 @@ body {
     padding: 10px;
     text-align: center;
     color: rgb(204, 204, 204);
-    background-color: var(--schedule-light);
+    background-color: var(--colorborderdark);
 }
 
 /* SCROLLBUTTON */
