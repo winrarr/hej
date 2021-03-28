@@ -1,28 +1,40 @@
 :root {
     --navpadding: 2px;
+    --colordark: rgb(63, 63, 124);
+    --colormedium: rgb(132, 150, 177);
+    --colorlight: rgb(186, 199, 216);
+    --colorbck: rgb(216, 226, 240);
+    --colorcourse1: rgb(184, 67, 67);
+    --colorcourse2: rgb(58, 167, 76);
+    --colorcourse3: rgb(182, 154, 62);
+    --colorborderdark: rgb(47, 47, 105);
+    --colorbordermedium: rgb(84, 118, 136);
+    --colorborderlight: rgb(106, 129, 158);
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color:brown;
+    background-color:var(--colorbck);
 }
+
 
 .navbar {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     display: flex;
     align-items: center;
-    background-color:forestgreen;
+    background-color: var(--colordark);
 }
 
 .logo {
     margin: var(--navpadding);
     cursor: pointer;
+    filter: brightness(0.6)
 }
 
 .logo:hover {
-    filter: brightness(1.3);
+    filter: brightness(2.0);
     transition: all 0.2s ease 0s;
 }
 
@@ -39,17 +51,27 @@ body {
     padding: 5px;
     border: 2px solid black;
     cursor: pointer;
-    background-color: goldenrod;
     border-radius: 5px;
 }
 
 .course-items li:hover {
-    filter: brightness(0.9);
+    filter: brightness(1.2);
+}
+
+#course1 {
+    background-color: var(--colorcourse1);
+}
+
+#course2 {
+    background-color: var(--colorcourse2);
+}
+
+#course3 {
+    background-color: var(--colorcourse3);
 }
 
 .course-items li p {
     max-width: 150px;
-    text-decoration: none;
     font-size: 18px;
     margin: 8px;
     white-space: nowrap;
@@ -74,27 +96,24 @@ body {
     padding: 4px;
     margin-right: 10px;
     right:0;
-    background-color: magenta;
+    background-color: var(--colormedium);
     border-radius: 4px;
+    border: 3px solid var(--colorbordermedium);
 }
 
 .burger-dropdown button {
     width: 100%;
     margin: 1px;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
     outline: none;
     background-color: transparent;
     border-radius: 4px;
 }
 
 .burger-dropdown button:hover{
-    filter: brightness(0.9);
-    background-color: rgb(159, 173, 194);
-}
-
-body {
-    background-color: rgb(204, 204, 204);
+    filter: brightness(1.2);
+    background-color: var(--colormedium)
 }
 
 /* SCROLLBUTTON */
@@ -110,7 +129,12 @@ body {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    border: 2px solid black;
+    border: 2px solid var(--colorborderdark);
+    background-color: var(--colordark);
+}
+
+.scrollbutton:hover{
+    filter: brightness(1.2);
 }
 
 .arrowdown {
@@ -134,8 +158,8 @@ body {
 
 .box {
     margin: 20px;
-    border: 2px solid rgb(43, 43, 43);
-    background-color: rgb(108, 134, 108);
+    border: 2px solid var(--colorbordermedium);
+    background-color: var(--colormedium);
     border-radius: 10px;
     padding: 5px;
     height: 85vh;
@@ -153,22 +177,41 @@ body {
     cursor: pointer;
     display: grid;
     align-items: center;
-    border: 2px solid  rgb(64, 88, 64);
-    background-color:  rgb(149, 179, 149);
     border-radius: 10px;
-    height: 15%;
+    height: 10%;
+    border: 2px solid  var(--colorborderlight);
+    background-color:  var(--colorlight);
 }
 
-.assignment-element:hover, .announcement-element:hover{
-    filter: brightness(0.9);
+.assignment-element:hover, .announcement-element:hover, .infobox-button:hover{
+    filter: brightness(1.2);
 }
 
 .announcement-element {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 75% 25%;
 }
 
 .assignment-element{
-    grid-template-columns: 40% 35% 25%;
+    grid-template-columns: 5% 35% 35% 25%;
+}
+
+.course1 {
+    background-color: var(--colorcourse1);
+}
+
+.course2 {
+    background-color: var(--colorcourse2);
+}
+
+.course3 {
+    background-color: var(--colorcourse3);
+}
+
+.dot {
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 }
 
 .infobox-text {
@@ -189,9 +232,10 @@ body {
 
 
 .infobox-button {
-    background-color: rgb(149, 179, 149);
+    background-color: var(--colorlight);
     border-radius: 10px;
-    border: 2px solid  rgb(64, 88, 64);
+    border: 2px solid  var(--colorborderlight);
+    font-size: 22px;
 }
 
 
@@ -203,14 +247,12 @@ body {
 
 footer {
     text-align: center;
-    background-color: rgb(30, 35, 41);
-    display: flex;
+    background-color: rgb(22, 38, 58);
+    display: grid;
     align-items: center;
+    height: 8vh;
+    grid-template-columns: 15% 15% 15% 10% 15% 15% 15%;
   }
-
-.footeritem {
-    flex-grow: 5;
-}
 
 footer a {
     color:rgb(159, 173, 194);
