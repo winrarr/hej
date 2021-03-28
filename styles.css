@@ -1,14 +1,14 @@
 :root {
     --navpadding: 2px;
-    --colordark: rgb(63, 63, 124);
-    --colormedium: rgb(132, 150, 177);
-    --colorlight: rgb(186, 199, 216);
-    --colorbck: rgb(216, 226, 240);
-    --colorcourse1: rgb(184, 67, 67);
-    --colorcourse2: rgb(58, 167, 76);
-    --colorcourse3: rgb(182, 154, 62);
+    --colordark: rgb(56, 81, 163);
+    --colormedium: rgb(146, 157, 197);
+    --colorlight: rgb(190, 198, 226);
+    --colorbck: rgb(226, 230, 236);
+    --colorcourse1: rgb(189, 63, 63);
+    --colorcourse2: rgb(39, 161, 59);
+    --colorcourse3: rgb(214, 175, 48);
     --colorborderdark: rgb(47, 47, 105);
-    --colorbordermedium: rgb(84, 118, 136);
+    --colorbordermedium: rgb(113, 147, 165);
     --colorborderlight: rgb(106, 129, 158);
 }
 
@@ -25,6 +25,7 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--colordark);
+    top: 0;
 }
 
 .logo {
@@ -109,11 +110,11 @@ body {
     outline: none;
     background-color: transparent;
     border-radius: 4px;
+    background-color: var(--colormedium);
 }
 
 .burger-dropdown button:hover{
     filter: brightness(1.2);
-    background-color: var(--colormedium)
 }
 
 /* SCROLLBUTTON */
@@ -258,4 +259,3 @@ footer a {
     color:rgb(159, 173, 194);
     font-size: 30px; 
 }
-
