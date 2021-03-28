@@ -1,9 +1,9 @@
 :root {
     --navpadding: 2px;
-    --colordark: rgb(56, 81, 163);
+    --colordark: rgb(80, 99, 161);
     --colormedium: rgb(146, 157, 197);
     --colorlight: rgb(190, 198, 226);
-    --colorbck: rgb(226, 230, 236);
+    --colorbck: rgb(233, 232, 240);
     --colorcourse1: rgb(189, 63, 63);
     --colorcourse2: rgb(39, 161, 59);
     --colorcourse3: rgb(214, 175, 48);
@@ -34,11 +34,11 @@ body {
 .logo {
     margin: var(--navpadding);
     cursor: pointer;
-    filter: brightness(0.6)
+    filter: brightness(0.9);
 }
 
 .logo:hover {
-    filter: brightness(2.0);
+    filter: brightness(1.7);
     transition: all 0.2s ease 0s;
 }
 
@@ -240,29 +240,23 @@ body {
 }
 
 .calendar-table-item {
-    border: 1px solid rgb(204, 204, 204);
-    background-color: rgb(180, 180, 180);
+    border: 1px solid var(--colorbck);
+    background-color: var(--colormedium);
     box-sizing: border-box;
     margin: 0;
 }
 
-.calendar-table-header {
-    border: 1px solid rgb(204, 204, 204);
+.calendar-table-header, .calendar-table-column-header-today {
+    border: 1px solid var(--colorbck);
     font-family: "AU Passata",sans-serif;
     font-weight: bold;
     padding: 10px;
     text-align: center;
-    color: rgb(204, 204, 204);
+    color: var(--colorbck)  ;
     background-color: var(--colordark);
 }
 
-.calendar-table-row-header-today {
-    border: 1px solid rgb(204, 204, 204);
-    font-family: "AU Passata",sans-serif;
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-    color: rgb(204, 204, 204);
+.calendar-table-column-header-today {
     background-color: var(--colorborderdark);
 }
 

@@ -7,9 +7,9 @@ function setup() {
 function addSchedule() {
     let calendar = document.getElementById("calendar");
     let day = new Date().getDay();
-    if (day == 0) {day = 7;} //sunday is 0 in getDay()
+    if (day == 0) {day = 7;}//sunday is 0 in getDay()
     let currentDay = calendar.children[day];
-    currentDay.className = "calendar-table-row-header-today";
+    currentDay.className = "calendar-table-column-header-today";
     
     for (let i = 0; i < 8*(17-8); i++) {
         var element = document.createElement("div");
