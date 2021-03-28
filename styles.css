@@ -10,9 +10,13 @@
     --colorborderdark: rgb(47, 47, 105);
     --colorbordermedium: rgb(113, 147, 165);
     --colorborderlight: rgb(106, 129, 158);
+    --schedule-dark: rgb(20, 55, 25);
+    --schedule-light: rgb(52, 145, 66);
+    --schedule-button-shadow: rgb(40, 109, 50);
 }
 
 body {
+    text-align: center;
     margin: 0px;
     padding: 0px;
     background-color:var(--colorbck);
@@ -119,6 +123,152 @@ body {
     filter: brightness(1.2);
 }
 
+
+/* CALENDAR HEAD */
+
+.calendar-div {
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-header ul {
+    margin: 5px;
+}
+
+.calendar-header li {
+    align-self: flex-end;
+}
+
+.horizontal-list li {
+	display: inline;
+}
+
+.calendar-header-left {
+    padding-left: 0px;
+    display: flex;
+}
+
+.calendar-header-right {
+    display: flex;
+}
+
+
+/* LEFT */
+
+.week-changer {
+    padding: 7px;
+    border-radius: 3px;
+    cursor: default; 
+    font-weight: bold;
+    background-color: var(--schedule-light);
+    color: black;
+}
+
+.week-changer:hover {
+    filter: brightness(0.9);
+}
+
+.date-picker {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    font-family: "AU Passata",sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--schedule-light);
+    color: black;
+}
+
+
+/* RIGHT */
+
+.calendar-header-right li {
+    padding: 5px;
+    margin-left: 1px;
+    cursor: default; 
+    font-weight: bold;
+}
+
+.calendar-header-right li:hover {
+    filter: brightness(0.9);
+}
+
+.calendar-header-right #week-button {
+    background-color: var(--schedule-light);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.calendar-header-right #month-button {
+    background-color: var(--schedule-light);
+}
+
+.calendar-header-right #semester-button {
+    background-color:  var(--schedule-light);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.active-button {
+    box-shadow: inset 0px 3px var(--schedule-button-shadow);
+}
+
+.calendar-right div {
+    font-weight: bold;
+    background-color: var(--schedule-light);
+    padding: 5px;
+    margin-left: 1px;
+}
+
+.time-range-buttons:active {
+    background-color: var(--schedule-dark);
+}
+
+/* CALENDAR TABLE */
+
+.calendar-table {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    height: 69vh;
+    
+}
+
+.calendar-table-item {
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(180, 180, 180);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.calendar-table-header {
+    border: 1px solid rgb(204, 204, 204);
+    font-family: "AU Passata",sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    background-color: var(--schedule-dark);
+}
+
+.calendar-table-row-header-today {
+    border: 1px solid rgb(204, 204, 204);
+    font-family: "AU Passata",sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    background-color: var(--schedule-light);
+}
+
 /* SCROLLBUTTON */
 
 #scroll-button {
@@ -134,6 +284,7 @@ body {
     width: 50px;
     border: 2px solid var(--colorborderdark);
     background-color: var(--colordark);
+
 }
 
 .scrollbutton:hover{
@@ -239,11 +390,6 @@ body {
     border: 2px solid  var(--colorborderlight);
     font-size: 22px;
 }
-
-
-
-
-
 
 /* Footer */
 
