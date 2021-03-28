@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 function setup() {
-    addSchedule();
+    addCalendar();
 }
 
-function addSchedule() {
+function addCalendar() {
     let calendar = document.getElementById("calendar");
     let day = new Date().getDay();
     if (day == 0) {day = 7;}//sunday is 0 in getDay()
@@ -25,6 +25,9 @@ function addSchedule() {
     }
 }
 
+
+// Calendar
+
 function previousWeek() {
     alert("Sidste uge :D");
 }
@@ -32,9 +35,6 @@ function previousWeek() {
 function nextWeek() {
     alert("Næste uge :D");
 }
-
-
-// Schedule
 
 function setActiveButton(button) {
     var c = button.parentElement.children;
@@ -44,7 +44,9 @@ function setActiveButton(button) {
     button.classList.add("active-button");
 }
 
+
 //scroll to box
+
 function scrollWin(){
     var myelement = document.getElementById("scroll-button");
     myelement.scrollIntoView({behavior:"smooth"});

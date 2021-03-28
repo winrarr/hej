@@ -119,7 +119,7 @@ body {
 }
 
 
-/* CALENDAR HEAD */
+/* CALENDAR */
 
 .calendar-div {
     margin: 2% 4% 2% 4%;
@@ -140,7 +140,7 @@ body {
 }
 
 .horizontal-list li {
-	display: inline; /* check if can be reused other places */
+	display: inline;
 }
 
 .calendar-header-left {
@@ -153,7 +153,7 @@ body {
 }
 
 
-/* LEFT */
+/* CALENDAR HEADER LEFT */
 
 .week-changer {
     padding: 7px;
@@ -163,7 +163,6 @@ body {
     background-color: var(--colorlight);
     color: black;
     margin-right: 10px;
-    
     font-size: 15px;
 }
 
@@ -178,7 +177,7 @@ body {
 }
 
 
-/* RIGHT */
+/* CALENDAR HEADER RIGHT */
 
 .calendar-header-right li {
     padding: 5px;
@@ -206,13 +205,13 @@ body {
     box-shadow: inset 0px 3px var(--colorborderlight);
 }
 
+
 /* CALENDAR TABLE */
 
 .calendar-table {
     display: grid;
     grid-template-columns: 80px repeat(7, 1fr);
     height: 69vh;
-    
 }
 
 .calendar-table-item {
@@ -232,6 +231,7 @@ body {
 .today {
     background-color: var(--colorborderdark);
 }
+
 
 /* SCROLLBUTTON */
 
@@ -260,6 +260,7 @@ body {
     transform: rotate(45deg);
 }
 
+
 /* INFO BOXES */
 
 #infoboxes {
@@ -283,8 +284,6 @@ body {
     text-align: center;
     font-size: 35px;
 }
-
-
 
 .announcement-element, .assignment-element {
     cursor: pointer;
@@ -326,7 +325,6 @@ body {
     text-overflow: ellipsis;
 }
 
-
 .infobox-button {
     background-color: var(--colorlight);
     border-radius: 10px;
@@ -334,6 +332,7 @@ body {
     font-size: 22px;
     cursor: pointer;
 }
+
 
 /* Footer */
 
@@ -344,7 +343,7 @@ footer {
     align-items: center;
     text-align: center;
     height: 8vh;
-  }
+}
 
 footer a {
     color: var(--colorlight);
