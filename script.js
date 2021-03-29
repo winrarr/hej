@@ -47,6 +47,23 @@ function setActiveButton(button) {
 
 //scroll to box
 
-function scrollWin(scrollButton){
-    scrollButton.scrollIntoView({behavior:"smooth"});
+function scrollWin(){
+    let infoboxes = document.getElementById("infoboxes");
+    window.scrollTo({
+        top: findPos(infoboxes) - 64 - 10,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+function findPos(obj) {
+    let curtop = 0;
+
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+
+        return curtop;
+    }
 }
