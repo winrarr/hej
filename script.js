@@ -47,7 +47,6 @@ function setActiveButton(button) {
 
 //scroll to box
 
-function scrollWin(){
-    var myelement = document.getElementById("scroll-button");
-    myelement.scrollIntoView({behavior:"smooth"});
+function scrollWin(scrollButton){
+    scrollButton.scrollIntoView({behavior:"smooth"});
 }
