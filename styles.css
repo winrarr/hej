@@ -210,8 +210,10 @@ body {
 
 .calendar-table {
     display: grid;
-    grid-template-columns: 80px repeat(7, 1fr);
-    height: 69vh;
+    grid-template-columns: 90px repeat(7, 1fr);
+    grid-template-rows: 42px repeat(9, 1fr);
+    height: 72vh;
+    min-height: 450px;
 }
 
 .calendar-table-item {
@@ -220,12 +222,17 @@ body {
 }
 
 .calendar-table-header {
-    border: 1px solid var(--colorbck);
-    font-weight: bold;
-    padding: 5px;
-    text-align: center;
-    color: var(--colorbck);
     background-color: var(--colordark);
+    border: 1px solid var(--colorbck);
+    color: var(--colorbck);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-table-row-header {
+    height: 40px;
 }
 
 .today {
@@ -342,10 +349,10 @@ footer {
     grid-template-columns: 15% 15% 15% 10% 15% 15% 15%;
     align-items: center;
     text-align: center;
-    height: 8vh;
+    height: 65px;
 }
 
 footer a {
     color: var(--colorlight);
-    font-size: 25px;
+    font-size: 18px;
 }
