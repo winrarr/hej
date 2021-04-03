@@ -1,56 +1,49 @@
 :root {
-    --colordark: rgb(80, 99, 161);
-    --colormedium: rgb(146, 157, 197);
-    --colorlight: rgb(181, 190, 221);
-    --colorbck: rgb(222, 220, 236);
-    --colorcourse1: rgb(189, 63, 63);
-    --colorcourse2: rgb(39, 161, 59);
-    --colorcourse3: rgb(214, 175, 48);
-    --colorborderdark: rgb(47, 47, 105);
-    --colorbordermedium: rgb(113, 147, 165);
-    --colorborderlight: rgb(106, 129, 158);
-    --colorfooter: rgb(22, 38, 58);
+    --color-navbar: rgb(39, 68, 102);
+    --color-navbar-dark: rgb(19, 30, 46);
+    
+    --color-bck: rgb(222, 220, 236);
+    --color-dark: rgb(80, 99, 161);
+    --color-medium: rgb(146, 157, 197);
+    --color-light: rgb(181, 190, 221);
+    
+    --color-course1: rgb(189, 63, 63);
+    --color-course2: rgb(39, 161, 59);
+    --color-course3: rgb(214, 175, 48);
+    
+    --color-border-dark: rgb(62, 62, 136);
+    --color-border-medium: rgb(113, 147, 165);
+    --color-border-light: rgb(106, 129, 158);
+
+    --color-footer: rgb(22, 38, 58);
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color: var(--colorbck);
+    background-color: var(--color-bck);
     font-family: Tahoma, sans-serif;
 }
 
-.course1 {
-    background-color: var(--colorcourse1);
-}
 
-.course2 {
-    background-color: var(--colorcourse2);
-}
-
-.course3 {
-    background-color: var(--colorcourse3);
-}
-
+/* Navbar */
 
 .navbar {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     display: flex;
-    background-color: var(--colordark);
+    background-color: var(--color-navbar);
     top: 0;
     z-index: 10;
 }
 
+
 .logo {
     margin: 10px;
     cursor: pointer;
-    filter: brightness(0.9);
+    filter: brightness(3);
 }
 
-.logo:hover {
-    filter: brightness(1.1);
-    transition: all 0.2s ease 0s;
-}
 
 .course-items {
     display: flex;
@@ -60,16 +53,17 @@ body {
 }
 
 .course-items li {
+    display: flex;
     align-items: center;
     margin: 5px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid var(--color-navbar-dark);
     cursor: pointer;
     border-radius: 5px;
 }
 
 .course-items li:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.13);
 }
 
 .course-items p {
@@ -80,6 +74,22 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.course1 {
+    background-color: var(--color-course1);
+    opacity: 0.8;
+}
+
+.course2 {
+    background-color: var(--color-course2);
+    opacity: 0.8;
+}
+
+.course3 {
+    background-color: var(--color-course3);
+    opacity: 0.8;
+}
+
 
 .profile {
     margin: auto 20px auto auto;
@@ -101,15 +111,15 @@ body {
     padding: 6px;
     margin-right: 12px;
     right:0;
-    background-color: var(--colormedium);
+    background-color: var(--color-medium);
     border-radius: 4px;
-    border: 3px solid var(--colorbordermedium);
+    border: 3px solid var(--color-border-medium);
 }
 
 .burger-dropdown button {
     font-size: 25px;
     border-radius: 4px;
-    background-color: var(--colormedium);
+    background-color: var(--color-medium);
     outline: none;
     border: none;
 }
@@ -160,7 +170,7 @@ body {
     border-radius: 3px;
     cursor: default; 
     font-weight: bold;
-    background-color: var(--colorlight);
+    background-color: var(--color-light);
     color: black;
     margin-right: 10px;
     font-size: 15px;
@@ -184,7 +194,7 @@ body {
     margin-left: 1px;
     cursor: default; 
     font-weight: bold;
-    background-color: var(--colorlight);
+    background-color: var(--color-light);
 }
 
 .calendar-header-right li:hover {
@@ -202,7 +212,7 @@ body {
 }
 
 .active-button {
-    box-shadow: inset 0px 3px var(--colorborderlight);
+    box-shadow: inset 0px 3px var(--color-border-light);
 }
 
 
@@ -217,14 +227,14 @@ body {
 }
 
 .calendar-table-item {
-    border: 1px solid var(--colorbck);
-    background-color: var(--colorlight);
+    border: 1px solid var(--color-bck);
+    background-color: var(--color-light);
 }
 
 .calendar-table-header {
-    background-color: var(--colordark);
-    border: 1px solid var(--colorbck);
-    color: var(--colorbck);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-bck);
+    color: var(--color-bck);
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -236,7 +246,7 @@ body {
 }
 
 .today {
-    background-color: var(--colorborderdark);
+    background-color: var(--color-border-dark);
 }
 
 
@@ -251,8 +261,8 @@ body {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    border: 2px solid var(--colorborderdark);
-    background-color: var(--colordark);
+    border: 2px solid var(--color-border-dark);
+    background-color: var(--color-dark);
 }
 
 .scrollbutton:hover{
@@ -278,8 +288,8 @@ body {
 
 .box {
     margin: 20px;
-    border: 2px solid var(--colorbordermedium);
-    background-color: var(--colormedium);
+    border: 2px solid var(--color-border-medium);
+    background-color: var(--color-medium);
     border-radius: 10px;
     padding: 5px;
     height: 84vh;
@@ -298,8 +308,8 @@ body {
     align-items: center;
     border-radius: 10px;
     height: 10%;
-    border: 2px solid  var(--colorborderlight);
-    background-color:  var(--colorlight);
+    border: 2px solid  var(--color-border-light);
+    background-color:  var(--color-light);
 }
 
 .assignment-element:hover, .announcement-element:hover, .infobox-button:hover{
@@ -333,9 +343,9 @@ body {
 }
 
 .infobox-button {
-    background-color: var(--colorlight);
+    background-color: var(--color-light);
     border-radius: 10px;
-    border: 2px solid  var(--colorborderlight);
+    border: 2px solid  var(--color-border-light);
     font-size: 22px;
     cursor: pointer;
 }
@@ -344,7 +354,7 @@ body {
 /* Footer */
 
 footer {
-    background-color: var(--colorfooter);
+    background-color: var(--color-footer);
     display: grid;
     grid-template-columns: 15% 15% 15% 10% 15% 15% 15%;
     align-items: center;
@@ -353,6 +363,6 @@ footer {
 }
 
 footer a {
-    color: var(--colorlight);
+    color: var(--color-light);
     font-size: 18px;
 }
