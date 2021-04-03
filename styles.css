@@ -40,6 +40,7 @@ body {
 
 .logo {
     margin: 10px;
+    margin-right: 50px;
     cursor: pointer;
     filter: brightness(3);
 }
@@ -67,21 +68,22 @@ body {
     max-width: 150px;
     font-size: 18px;
     margin: 8px;
+    color: white;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .course1 {
-    background-color: var(--color-course1);
+    border-bottom: 5px solid var(--color-course1);
 }
 
 .course2 {
-    background-color: var(--color-course2);
+    border-bottom: 5px solid var(--color-course2);
 }
 
 .course3 {
-    background-color: var(--color-course3);
+    border-bottom: 5px solid var(--color-course3);
 }
 
 
