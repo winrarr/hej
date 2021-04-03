@@ -55,11 +55,8 @@ body {
 .course-items li {
     display: flex;
     align-items: center;
-    margin: 5px;
     padding: 5px;
-    border: 2px solid var(--color-navbar-dark);
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .course-items li:hover {
@@ -77,17 +74,14 @@ body {
 
 .course1 {
     background-color: var(--color-course1);
-    opacity: 0.8;
 }
 
 .course2 {
     background-color: var(--color-course2);
-    opacity: 0.8;
 }
 
 .course3 {
     background-color: var(--color-course3);
-    opacity: 0.8;
 }
 
 
