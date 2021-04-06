@@ -173,12 +173,10 @@ body {
 
 .calendar-header .left-button {
     border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
 }
 
 .calendar-header .right-button {
     border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
 }
 
 .active-button {
