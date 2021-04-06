@@ -58,6 +58,8 @@ body {
     align-items: center;
     padding: 5px;
     cursor: pointer;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
 }
 
 .course-items li:hover {
@@ -75,15 +77,15 @@ body {
 }
 
 .course1 {
-    border-bottom: 5px solid var(--color-course1);
+    border-bottom-color: var(--color-course1);
 }
 
 .course2 {
-    border-bottom: 5px solid var(--color-course2);
+    border-bottom-color: var(--color-course2);
 }
 
 .course3 {
-    border-bottom: 5px solid var(--color-course3);
+    border-bottom-color: var(--color-course3);
 }
 
 
@@ -309,7 +311,7 @@ body {
 }
 
 .assignment-element:hover, .announcement-element:hover, .infobox-button:hover{
-    filter: brightness(1.2);
+    filter: brightness(1.08);
 }
 
 .announcement-element {
@@ -327,11 +329,23 @@ body {
     border-radius: 50%;
 }
 
+.dot-course1 {
+    background-color: var(--color-course1);
+}
+
+.dot-course2 {
+    background-color: var(--color-course2);
+}
+
+.dot-course3 {
+    background-color: var(--color-course3);
+}
+
 .infobox-text2 {
     text-align: right;
 }
 
-.box p{
+.box p {
     margin: 10px;
     white-space: nowrap;
     overflow: hidden;
