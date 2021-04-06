@@ -37,17 +37,37 @@ function nextWeek() {
 }
 
 function setActiveButton(button) {
-    var c = button.parentElement.children;
-    for (let i = 0; i < c.length; i++) {
-      c[i].classList.remove("active-button");
-    }
+    removeActiveButton(button.parentElement);
     button.classList.add("active-button");
+}
+
+function removeActiveButton(parent) {
+    let c = parent.children;
+    for (let i = 0; i < c.length; i++) {
+        c[i].classList.remove("active-button");
+      }
 }
 
 
 //scroll to box
 
 function scrollWin(){
-    var myelement = document.getElementById("scroll-button");
-    myelement.scrollIntoView({behavior:"smooth"});
+    let infoboxes = document.getElementById("infoboxes");
+    window.scrollTo({
+        top: findPos(infoboxes) - 64 - 10,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+function findPos(obj) {
+    let curtop = 0;
+
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+
+        return curtop;
+    }
 }
