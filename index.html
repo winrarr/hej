@@ -40,15 +40,15 @@
 
     <div class="calendar-div">
         <div class="calendar-header">
-            <ul class="horizontal-list calendar-header-left">
-                <li onclick="previousWeek()" class="week-changer">Previous week</li>
-                <li><input type="date" class="week-changer date-picker"></li>
-                <li onclick="nextWeek()" class="week-changer">Next week</li>
+            <ul class="calendar-header-left horizontal-list">
+                <li class="left-button" onclick="previousWeek()">Previous week</li>
+                <li class="date-picker-li"><input type="date"></li>
+                <li class="right-button" onclick="nextWeek()">Next week</li>
             </ul>
-            <ul class="horizontal-list calendar-header-right">
-                <li id="week-button" class="active-button" onclick="setActiveButton(this)">Week</li>
-                <li id="month-button" onclick="setActiveButton(this)">Month</li>
-                <li id="semester-button" onclick="setActiveButton(this)">Semester</li>
+            <ul class="horizontal-list">
+                <li class="left-button" class="active-button" onclick="setActiveButton(this)">Week</li>
+                <li onclick="setActiveButton(this)">Month</li>
+                <li class="right-button" onclick="setActiveButton(this)">Semester</li>
             </ul>
         </div>
         <div id="calendar" class="calendar-table">
