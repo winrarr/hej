@@ -1,21 +1,24 @@
 :root {
-    --color-navbar: rgb(39, 68, 102);
-    --color-navbar-dark: rgb(19, 30, 46);
-    
-    --color-bck: rgb(222, 220, 236);
-    --color-dark: rgb(80, 99, 161);
-    --color-medium: rgb(146, 157, 197);
-    --color-light: rgb(181, 190, 221);
-    
-    --color-course1: rgb(189, 63, 63);
-    --color-course2: rgb(39, 161, 59);
-    --color-course3: rgb(214, 175, 48);
-    
-    --color-border-dark: rgb(62, 62, 136);
-    --color-border-medium: rgb(113, 147, 165);
-    --color-border-light: rgb(106, 129, 158);
+    --color-course1: hsl(0, 50%, 50%);
+    --color-course2: hsl(130, 50%, 50%);
+    --color-course3: hsl(61, 50%, 50%);
+    --color-course1-highlight: hsl(0, 70%, 50%);
+    --color-course2-highlight: hsl(130, 70%, 50%);
+    --color-course3-highlight: hsl(61, 70%, 50%);
 
-    --color-footer: rgb(22, 38, 58);
+    --color-navbar: hsl(226, 33%, 32%);
+    
+    --color-bck: hsl(226, 33%, 93%);
+    --color-dark: hsl(226, 33%, 47%);
+    --color-medium: hsl(226, 33%, 67%);
+    --color-light: hsl(226, 33%, 78%);
+    
+    --color-calendar-buttons: hsl(226, 33%, 72%);
+    --color-border-dark: hsl(226, 33%, 33%);
+    --color-border-medium: hsl(226, 33%, 55%);
+    --color-border-light: hsl(226, 33%, 58%);
+
+    --color-footer: hsl(226, 33%, 20%);
 }
 
 body {
@@ -62,10 +65,6 @@ body {
     border-bottom-style: solid;
 }
 
-.course-items li:hover {
-    filter: brightness(1.13);
-}
-
 .course-items p {
     max-width: 150px;
     font-size: 18px;
@@ -80,12 +79,24 @@ body {
     border-bottom-color: var(--color-course1);
 }
 
+.course1:hover {
+    border-bottom-color: var(--color-course1-highlight);
+}
+
 .course2 {
     border-bottom-color: var(--color-course2);
 }
 
+.course2:hover {
+    border-bottom-color: var(--color-course2-highlight);
+}
+
 .course3 {
     border-bottom-color: var(--color-course3);
+}
+
+.course3:hover {
+    border-bottom-color: var(--color-course3-highlight);
 }
 
 
@@ -153,7 +164,7 @@ body {
     margin-left: 1px;
     cursor: default; 
     font-weight: bold;
-    background-color: var(--color-light);
+    background-color: var(--color-calendar-buttons);
 }
 
 .calendar-header li:hover {
@@ -168,7 +179,7 @@ body {
     border: none;
     font-family: Tahoma, sans-serif;
     font-weight: bold;
-    background-color: var(--color-light);
+    background-color: var(--color-calendar-buttons);
 }
 
 .calendar-header .left-button {
