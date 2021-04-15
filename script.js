@@ -37,11 +37,15 @@ function nextWeek() {
 }
 
 function setActiveButton(button) {
-    var c = button.parentElement.children;
-    for (let i = 0; i < c.length; i++) {
-      c[i].classList.remove("active-button");
-    }
+    removeActiveButton(button.parentElement);
     button.classList.add("active-button");
+}
+
+function removeActiveButton(parent) {
+    let c = parent.children;
+    for (let i = 0; i < c.length; i++) {
+        c[i].classList.remove("active-button");
+      }
 }
 
 

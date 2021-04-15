@@ -40,26 +40,26 @@
 
     <div class="calendar-div">
         <div class="calendar-header">
-            <ul class="horizontal-list calendar-header-left">
-                <li onclick="previousWeek()" class="week-changer">Sidste uge</li>
-                <li><input type="date" class="week-changer date-picker"></li>
-                <li onclick="nextWeek()" class="week-changer">Næste uge</li>
+            <ul class="calendar-header-left horizontal-list">
+                <li class="left-button" onclick="previousWeek()">Previous week</li>
+                <li class="date-picker-li"><input type="date"></li>
+                <li class="right-button" onclick="nextWeek()">Next week</li>
             </ul>
-            <ul class="horizontal-list calendar-header-right">
-                <li id="week-button" class="active-button" onclick="setActiveButton(this)">Week</li>
-                <li id="month-button" onclick="setActiveButton(this)">Month</li>
-                <li id="semester-button" onclick="setActiveButton(this)">Semester</li>
+            <ul class="horizontal-list">
+                <li onclick="setActiveButton(this)" class="left-button active-button">Week</li>
+                <li onclick="setActiveButton(this)">Month</li>
+                <li onclick="setActiveButton(this)" class="right-button">Semester</li>
             </ul>
         </div>
         <div id="calendar" class="calendar-table">
-            <div class="calendar-table-header calendar-table-row-header">WEEK 12</div>
-            <div class="calendar-table-header calendar-table-row-header">MONDAY 22</div>
-            <div class="calendar-table-header calendar-table-row-header">TUESDAY 23</div>
-            <div class="calendar-table-header calendar-table-row-header">WEDNESDAY 24</div>
-            <div class="calendar-table-header calendar-table-row-header">THURSDAY 25</div>
-            <div class="calendar-table-header calendar-table-row-header">FRIDAY 26</div>
-            <div class="calendar-table-header calendar-table-row-header">SATURDAY 27</div>
-            <div class="calendar-table-header calendar-table-row-header">SUNDAY 28</div>
+            <div class="calendar-table-header">WEEK 12</div>
+            <div class="calendar-table-header">MONDAY 22</div>
+            <div class="calendar-table-header">TUESDAY 23</div>
+            <div class="calendar-table-header">WEDNESDAY 24</div>
+            <div class="calendar-table-header">THURSDAY 25</div>
+            <div class="calendar-table-header">FRIDAY 26</div>
+            <div class="calendar-table-header">SATURDAY 27</div>
+            <div class="calendar-table-header">SUNDAY 28</div>
         </div>
     </div>
     <div id="scroll-button">
@@ -114,49 +114,49 @@
             </div>
             <div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course2"></span>
+                    <span class="dot dot-course2"></span>
                     <p class="infobox-text">Assignment 1</p>
                     <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">Today 18:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course1"></span>
+                    <span class="dot dot-course1"></span>
                     <p class="infobox-text">Digital Logic Level</p>
                     <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
                     <p class="infobox-text2">Tomorrow 16:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course3"></span>
+                    <span class="dot dot-course3"></span>
                     <p class="infobox-text">Artifact Ecology</p>
                     <p class="infobox-text">Eksperimentel Systemudvikling</p>
                     <p class="infobox-text2">25/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course2"></span>
+                    <span class="dot dot-course2"></span>
                     <p class="infobox-text">Assignment 2</p>
                     <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">27/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course1"></span>
+                    <span class="dot dot-course1"></span>
                     <p class="infobox-text">Microarchitecture</p>
                     <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
                     <p class="infobox-text2">30/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course3"></span>
+                    <span class="dot dot-course3"></span>
                     <p class="infobox-text">Case Study</p>
                     <p class="infobox-text">Eksperimentel Systemudvikling</p>
                     <p class="infobox-text2">02/06/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course2"></span>
+                    <span class="dot dot-course2"></span>
                     <p class="infobox-text">Assignment 3</p>
                     <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">25/07/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot course2"></span>
+                    <span class="dot dot-course2"></span>
                     <p class="infobox-text">Assignment 4</p>
                     <p class="infobox-text">Numerisk Lineær Algebra</p>
                     <p class="infobox-text2">28/07/2021</p>
