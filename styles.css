@@ -1,10 +1,11 @@
 :root {
-    --color-course1: hsl(0, 50%, 50%);
-    --color-course2: hsl(130, 50%, 50%);
-    --color-course3: hsl(61, 50%, 50%);
-    --color-course1-highlight: hsl(0, 70%, 50%);
-    --color-course2-highlight: hsl(130, 70%, 50%);
-    --color-course3-highlight: hsl(61, 70%, 50%);
+
+    --color-course1: hsl(0, 70%, 50%);
+    --color-course2: hsl(130, 70%, 50%);
+    --color-course3: hsl(61, 70%, 50%);
+    --color-course1-highlight: hsl(0, 50%, 50%);
+    --color-course2-highlight: hsl(130, 50%, 50%);
+    --color-course3-highlight: hsl(61, 50%, 50%);
 
     --color-navbar: hsl(226, 33%, 32%);
     
@@ -85,27 +86,27 @@ body {
 }
 
 .course1 {
-    border-bottom-color: var(--color-course1-highlight);
-}
-
-.course1:hover {
     border-bottom-color: var(--color-course1);
 }
 
-.course2 {
-    border-bottom-color: var(--color-course2-highlight);
+.course1:hover {
+    border-bottom-color: var(--color-course1-highlight);
 }
 
-.course2:hover {
+.course2 {
     border-bottom-color: var(--color-course2);
 }
 
+.course2:hover {
+    border-bottom-color: var(--color-course2-highlight);
+}
+
 .course3 {
-    border-bottom-color: var(--color-course3-highlight);
+    border-bottom-color: var(--color-course3);
 }
 
 .course3:hover {
-    border-bottom-color: var(--color-course3);
+    border-bottom-color: var(--color-course3-highlight);
 }
 
 
@@ -188,6 +189,7 @@ body {
     border: none;
     font-weight: bold;
     background-color: var(--color-calendar-buttons);
+    outline: none;
 }
 
 .calendar-header .left-button {
@@ -239,21 +241,23 @@ body {
 
 /* SCROLLBUTTON */
 
-#scroll-button {
+#scroll-div {
     margin: 30px 0px 46px 0px;
     display: flex;
     justify-content: center;
 }
 
-.scrollbutton {
+.scroll-button {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    border: 2px solid var(--color-border-dark);
+    border: none;
+    outline: none;
+    /*border: 2px solid var(--color-border-dark);*/
     background-color: var(--color-dark);
 }
 
-.scrollbutton:hover{
+.scroll-button:hover{
     filter: brightness(1.2);
 }
 
