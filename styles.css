@@ -278,7 +278,6 @@ body {
     margin: 20px;
     border: 2px solid var(--color-border-medium);
     background-color: var(--color-medium);
-    border-radius: 10px;
     padding: 5px;
     height: 84vh;
     display: grid;
@@ -294,7 +293,6 @@ body {
     cursor: pointer;
     display: grid;
     align-items: center;
-    border-radius: 10px;
     height: 10%;
     border: 2px solid  var(--color-border-light);
     background-color:  var(--color-light);
@@ -344,12 +342,10 @@ body {
 
 .infobox-button {
     background-color: var(--color-light);
-    border-radius: 10px;
     border: 2px solid  var(--color-border-light);
     font-size: 22px;
     cursor: pointer;
 }
-
 
 /* Footer */
 
@@ -365,4 +361,9 @@ footer {
 footer a {
     color: var(--color-light);
     font-size: 18px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
