@@ -55,9 +55,14 @@ body {
     cursor: pointer;
 }
 
-.logo:hover {
+.logo:hover,
+.course1:hover p,
+.course2:hover p,
+.course3:hover p {
     color: hsl(0, 0%, 85%);
 }
+
+
 
 .course-items {
     display: flex;
