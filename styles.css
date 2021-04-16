@@ -55,7 +55,10 @@ body {
     cursor: pointer;
 }
 
-.logo:hover, .course-items p:hover {
+.logo:hover,
+.course1:hover p,
+.course2:hover p,
+.course3:hover p {
     color: hsl(0, 0%, 85%);
 }
 
@@ -71,6 +74,8 @@ body {
     align-items: center;
     padding: 5px;
     cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 0px;
     border-bottom-width: 8px;
     border-bottom-style: solid;
 }
