@@ -1,3 +1,18 @@
 body {
     color: red;
 }
+
+.coursepage {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    position: -webkit-sticky; /* Safari */
+    
+    z-index: -2;
+    background-color: seagreen;
+}

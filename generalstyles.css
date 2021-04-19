@@ -162,6 +162,7 @@ footer {
     align-items: center;
     text-align: center;
     height: 65px;
+    z-index: 2;
 }
 
 footer a {
