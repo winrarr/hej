@@ -130,7 +130,7 @@
 
 .box {
     margin: 20px;
-    border: 2px solid var(--color-border-medium);
+    border: 0px solid var(--color-border-medium);
     background-color: var(--color-medium);
     padding: 5px;
     height: 84vh;
@@ -144,12 +144,20 @@
 }
 
 .announcement-element, .assignment-element {
-    cursor: pointer;
     display: grid;
     align-items: center;
     height: 10%;
-    border: 2px solid  var(--color-border-light);
+}
+
+.announcement-element, .assignment-element, .infobox-button {
+    cursor: pointer;
+    border: 0px solid  var(--color-border-light);
     background-color:  var(--color-light);
+    margin: 6px;
+}
+
+.infobox-button {
+    font-size: 22px;
 }
 
 .assignment-element:hover, .announcement-element:hover, .infobox-button:hover{
@@ -194,9 +202,4 @@
     text-overflow: ellipsis;
 }
 
-.infobox-button {
-    background-color: var(--color-light);
-    border: 2px solid  var(--color-border-light);
-    font-size: 22px;
-    cursor: pointer;
-}
+
