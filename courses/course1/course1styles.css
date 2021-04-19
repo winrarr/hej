@@ -1,18 +1,39 @@
 body {
     color: red;
+    background-color: rgb(93, 125, 168);
 }
 
 .coursepage {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 10% 75% 15%;
+}
+
+.sidenav, sidenav2 {
+    display: flex;
+    flex-direction: column;
+    height: 78vh;
+    top: 59px;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    
+    z-index: 1;
+    padding: 3px;
+}
+
+.sidenav button {
+    height: 8%;
+    margin: 3px;
 }
 
 .sidenav {
-    height: 100%;
-    width: 100px;
-    position: fixed;
-    position: -webkit-sticky; /* Safari */
-    
-    z-index: -2;
     background-color: seagreen;
+}
+
+.coursecontent {
+    width: 100%;
+    background-color: violet;
+}
+
+.course1 {
+    background-color: teal;
 }
