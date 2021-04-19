@@ -1,18 +1,16 @@
 body {
-    color: red;
-    background-color: rgb(93, 125, 168);
+    background-color: var(--color-bck);
 }
 
 .coursepage {
     display: grid;
     grid-template-columns: 10% 75% 15%;
+    min-height: 97vh;
 }
 
-.sidenav, sidenav2 {
-    display: flex;
-    flex-direction: column;
+.sidenav, .sidenav2 {
     height: 78vh;
-    top: 59px;
+    top: 60px;
     position: sticky;
     position: -webkit-sticky; /* Safari */
     
@@ -21,19 +19,49 @@ body {
 }
 
 .sidenav button {
-    height: 8%;
-    margin: 3px;
+    height: 10%;
+    margin: 5px;
+    font-size: 17px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 255, 255);
 }
 
 .sidenav {
-    background-color: seagreen;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-course1);
+}
+
+
+.sidenavcontainer {
+    background-color: var(--color-course1);
+}
+
+.sidenav2 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: var(--color-medium);
+}
+
+.sidenav2 div {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-border-light);
+    margin: 4px;
+    padding: 4px;
+}
+
+
+.sidenavcontainer2 {
+    background-color: var(--color-medium);
 }
 
 .coursecontent {
     width: 100%;
-    background-color: violet;
+    background-color: var(--color-bck);
 }
 
 .course1 {
-    background-color: teal;
+    border-bottom-width: 15px !important;
 }
