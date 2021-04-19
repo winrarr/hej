@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="course1styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="course1script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,36 +41,29 @@
     
     <div class="coursepage">
         <div class="sidenav">
-            <button>Button1</button>
-            <button>Button2</button>
+            <button onclick="displayCoursePlan()">Course plan</button>
+            <button onclick="alert('Open Handins');">Handins</button>
+            <button onclick="alert('Open announcements');">Announcements</button>
+            <button onclick="alert('Open recordings');">Recordings</button>
+            <button onclick="alert('Open course material');">Course material</button>
+            <button onclick="alert('Open Slides');">Slides</button>
+            <button onclick="alert('Open Additional information');">Additional information</button>
         </div>
-        <div class="coursecontent">
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
-            <p>p</p>
+        <div class="content-container">
+            <table id="content-table">
+                <tr>
+                    <th>Day</th>
+                    <th>Lecture</th>
+                    <th>Literature</th>
+                    <th>Slides</th>
+                    <th>Videos</th>
+                    <th>Exercises</th>
+                    <th>Assignments</th>
+                </tr>
+            </table>
+
         </div>
     </div>
-
-    
-
-    
-
 
     <footer>
         <div class="footeritem">
