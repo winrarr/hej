@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
+var container;
+
 function setup() {
-    displayCoursePlan();
+    container = document.getElementById("content-container");
+    //displayCoursePlan();
+}
+
+function reset() {
+    container.innerHTML = "";
 }
 
 function displayCoursePlan() {
-    console.log("hej");
+    reset();
+    container.innerHTML = "<table id='content-table'><tr><th>Day</th><th>Lecture</th><th>Literature</th><th>Slides</th><th>Videos</th><th>Exercises</th><th>Assignments</th></tr> </table>";
     let coursecontent = document.getElementById("content-table");
     
     for (let row = 0; row < 20; row++) { //this is rows! change later!
@@ -48,6 +56,13 @@ function displayCoursePlan() {
     
         coursecontent.appendChild(trow);
     }
+
+    
+}
+
+function displayOtherInfo(){
+    reset();
+    container.innerHTML = "INFO INFO";
 }
 
 

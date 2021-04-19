@@ -63,15 +63,14 @@ body {
 }
 
 .course1 {
-    border-bottom-width: 15px !important;
+    border-bottom-width: 10px !important;
 }
 
-.content-container {
-    
+#content-container {
+    padding: 35px;
 }
 
 #content-table {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
@@ -92,3 +91,22 @@ body {
     background-color: #4CAF50;
     color: white;
   }
+
+#other-info {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#other-info button {
+    margin: 40px;
+    height: 30vh;
+    outline: none;
+    background-color: var(--color-light);
+    border: 3px solid var(--color-border-light);
+    font-size: 30px;
+    padding: 20px;
+}
+
+#other-info button:hover {
+    filter: brightness(1.2);
+}
