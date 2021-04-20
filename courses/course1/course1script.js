@@ -68,8 +68,50 @@ function displayCoursePlan() {
         coursecontent.appendChild(trow);
     }
 
-    
 }
+
+//decide whether or not to include handins
+
+
+//decide whether or not to include announcements
+
+function displayRecordings(){
+    reset();
+    container.innerHTML = `
+    <div id="recordings">
+        <table id="recordings-table">
+            <tr>
+                <th>Lecture</th>
+                <th>Video</th>
+            </tr>
+            <tr>
+                <td>Lecture 1</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Course introduction</td>
+            </tr>  
+            <tr>
+                <td>Lecture 2</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Actual Course introduction</td>
+            </tr>  
+            <tr>
+                <td>Lecture 3</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">How to avoid getting rickrolled.exe</td>
+            </tr>  
+            <tr>
+                <td>Lecture 4</td>
+                <td><a href="https://www.youtube.com/watch?v=Q3BCGijAO6E">Micrco programming</td>
+            </tr>  
+            <tr>
+                <td>Lecture 5</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">never gonna</td>
+            </tr>  
+            <tr>
+                <td>Lecture 6</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">give you up</td>
+            </tr>  
+        </table>
+    </div>`;
+}
+
 
 function displayOtherInfo(){
     reset();
