@@ -1,25 +1,28 @@
 :root {
+    --color-navbar: #243c64;
 
     --color-course1: hsl(0, 70%, 50%);
     --color-course2: hsl(130, 70%, 50%);
-    --color-course3: hsl(61, 70%, 50%);
+    --color-course3: hsl(44, 70%, 50%);
     --color-course1-highlight: hsl(0, 50%, 50%);
     --color-course2-highlight: hsl(130, 50%, 50%);
-    --color-course3-highlight: hsl(61, 50%, 50%);
-
-    --color-navbar: hsl(226, 33%, 32%);
+    --color-course3-highlight: #bf9d40;
     
-    --color-bck: hsl(226, 33%, 93%);
-    --color-dark: hsl(226, 33%, 47%);
-    --color-medium: hsl(226, 33%, 67%);
-    --color-light: hsl(226, 33%, 78%);
-    
-    --color-calendar-buttons: hsl(226, 33%, 72%);
-    --color-border-dark: hsl(226, 33%, 33%);
-    --color-border-medium: hsl(226, 33%, 55%);
-    --color-border-light: hsl(226, 33%, 58%);
+    --color-bck: #e3e5e9;
+    --color-dark: #243c64;
+    --color-medium: #23395f;
+    --color-light: #aeb6c2; 
 
-    --color-footer: hsl(226, 33%, 20%);
+    --color-scroll-buton: #2a4470;
+    
+    --color-calendar-buttons: #243c64;
+    --color-border-dark: #355691;
+    --color-border-medium: #3768a0;
+    --color-border-light: #5280cf;
+
+    --color-footer: #0f1a2c;
+
+    --color-box-element-colors: #aeb6c2;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
@@ -47,7 +50,7 @@ body {
 }
 
 .logo {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 25px;
     margin: 15px;
     margin-right: 50px;
@@ -124,6 +127,7 @@ body {
 }
 
 .profile:hover .burger-dropdown {
+    background-color: var(--color-navbar);
     display: grid;
     align-content: right;
 }
@@ -132,17 +136,16 @@ body {
     text-align: right;
     display: none;
     position: absolute;
-    padding: 6px;
     margin-right: 12px;
     right:0;
     background-color: var(--color-medium);
-    border-radius: 4px;
-    border: 3px solid var(--color-border-medium);
+
+    border: 3px solid var(--color-border-dark) ;
 }
 
 .burger-dropdown button {
+    color: white;
     font-size: 25px;
-    border-radius: 4px;
     background-color: var(--color-medium);
     outline: none;
     border: none;

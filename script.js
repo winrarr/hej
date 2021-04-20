@@ -16,10 +16,25 @@ function addCalendar() {
         if (i % 8 == 0) {
             let time = i / 8 + 8;
             element.innerHTML = ("0" + time).slice(-2) + " - " + ("0" + (time+1)).slice(-2);
+            element.style.backgroundColor = "#355691";
             element.classList.add("calendar-table-header");
         } else {
-            element.innerHTML = "&nbsp;";
-            element.classList.add("calendar-table-item");
+            if (i == 1 || i == 10) {
+                element.innerHTML = "Test";
+                element.style.backgroundColor = "#bf4040";
+                element.classList.add("calender-table-item")
+            } else if (i == 19 || i == 28 || i == 37) {
+                element.innerHTML = "Test";
+                element.style.backgroundColor = "#bf9d40";
+                element.classList.add("calender-table-item")
+            } else if (i == 46 || i == 55) {
+                element.innerHTML = "Test";
+                element.style.backgroundColor = "#1a9c30";
+                element.classList.add("calender-table-item")
+            } else {
+                element.innerHTML = "&nbsp;";
+                element.classList.add("calendar-table-item");   
+            }
         }
         calendar.appendChild(element);
     }

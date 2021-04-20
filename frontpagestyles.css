@@ -19,6 +19,7 @@
 }
 
 .calendar-header li {
+    color:white;
     display: inline;
     padding: 5px;
     margin-left: 1px;
@@ -36,6 +37,7 @@
 }
 
 .calendar-header input {
+    color:white;
     border: none;
     font-weight: bold;
     background-color: var(--color-calendar-buttons);
@@ -104,7 +106,7 @@
     border: none;
     outline: none;
     /*border: 2px solid var(--color-border-dark);*/
-    background-color: var(--color-dark);
+    background-color: var(--color-scroll-buton);
 }
 
 .scroll-button:hover{
@@ -112,7 +114,7 @@
 }
 
 .arrowdown {
-    border: solid black;
+    border: solid rgb(255, 255, 255);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 5px;
@@ -151,8 +153,8 @@
 
 .announcement-element, .assignment-element, .infobox-button {
     cursor: pointer;
-    border: 0px solid  var(--color-border-light);
-    background-color:  var(--color-light);
+    border: 0px solid var(--color-border-light);
+    background-color: var(--color-box-element-colors);
     margin: 6px;
 }
 
