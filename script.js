@@ -16,7 +16,7 @@ function addCalendar() {
         if (i % 8 == 0) {
             let time = i / 8 + 8;
             element.innerHTML = ("0" + time).slice(-2) + " - " + ("0" + (time+1)).slice(-2);
-            element.style.backgroundColor = "#355691";
+            element.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--color-border-dark");
             element.classList.add("calendar-table-header");
         } else {
             if (i == 1 || i == 10) {

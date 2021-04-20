@@ -73,6 +73,7 @@ body {
 }
 
 .course-items li {
+    min-width: 100px;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -81,16 +82,14 @@ body {
     padding-bottom: 0px;
     border-bottom-width: 6px;
     border-bottom-style: solid;
+    justify-content: center;
+
 }
 
 .course-items p {
-    max-width: 150px;
-    font-size: 18px;
+    font-size: 20px;
     margin: 8px;
     color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .course1 {
@@ -139,7 +138,6 @@ body {
     margin-right: 12px;
     right:0;
     background-color: var(--color-medium);
-
     border: 3px solid var(--color-border-dark) ;
 }
 
