@@ -84,7 +84,7 @@
 .calendar-table-header {
     background-color: var(--color-dark);
     border: 1px solid var(--color-bck);
-    color: var(--color-bck);
+    color: white;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -155,7 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-bck);
+    color: white;
 }
 
 .announcement-element, .assignment-element {

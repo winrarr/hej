@@ -68,7 +68,7 @@ body {
 }
 
 #content-container {
-    padding: 35px;
+    padding: 60px;
 }
 
 /* contains course plan and recordings styling! */
@@ -107,13 +107,15 @@ body {
 }
 
 #other-info button {
-    margin: 40px;
+    margin: 15px;
     height: 30vh;
     outline: none;
-    background-color: var(--color-light);
-    border: 3px solid var(--color-border-light);
+    color: white;
+    background-color: var(--color-dark);
+    border: 0px solid var(--color-dark);
     font-size: 30px;
     padding: 20px;
+    border-radius: 4px;
 }
 
 #other-info button:hover {
