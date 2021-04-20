@@ -34,7 +34,6 @@ body {
     background-color: var(--color-course1);
 }
 
-
 .sidenavcontainer {
     background-color: var(--color-course1);
 }
@@ -51,7 +50,6 @@ body {
     margin: 4px;
     padding: 4px;
 }
-
 
 .sidenavcontainer2 {
     background-color: var(--color-medium);
@@ -98,6 +96,28 @@ body {
     text-align: left;
     background-color: #4CAF50;
     color: white;
+}
+
+#course-material-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(--color-bck);
+    padding: 10px;
+}
+
+#course-material-items {
+    background-color: var(--color-bck);
+    padding: 10px;
+    border: 10px solid grey;
+}
+
+#course-material-header {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+#course-material-text {
+    font-size: 22px;
 }
 
 #other-info {
