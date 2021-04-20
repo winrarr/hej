@@ -55,10 +55,7 @@ body {
     cursor: pointer;
 }
 
-.logo:hover,
-.course1:hover p,
-.course2:hover p,
-.course3:hover p {
+.logo:hover {
     color: hsl(0, 0%, 85%);
 }
 
@@ -80,6 +77,11 @@ body {
     border-bottom-style: solid;
 }
 
+.course-items li:hover {
+    border-bottom-width: 10px;
+    padding-top: 12px;
+}
+
 .course-items p {
     max-width: 150px;
     font-size: 18px;
@@ -94,24 +96,12 @@ body {
     border-bottom-color: var(--color-course1);
 }
 
-.course1:hover {
-    border-bottom-color: var(--color-course1-highlight);
-}
-
 .course2 {
     border-bottom-color: var(--color-course2);
 }
 
-.course2:hover {
-    border-bottom-color: var(--color-course2-highlight);
-}
-
 .course3 {
     border-bottom-color: var(--color-course3);
-}
-
-.course3:hover {
-    border-bottom-color: var(--color-course3-highlight);
 }
 
 
