@@ -112,6 +112,29 @@ function displayRecordings(){
     </div>`;
 }
 
+function displayCourseMaterial(){
+    reset();
+    container.innerHTML = `
+    <div id="course-material-grid">
+        <div id="course-material-items">
+        <h1 id="course-material-header">Books<\h1>
+        <p id="course-material-text">We will be using 3 books...<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Copyrighted content<\h1>
+        <p id="course-material-text">There is none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">None-copyrighted content<\h1>
+        <p id="course-material-text">Also none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Optional content<\h1>
+        <p id="course-material-text">All that good intel architecture documentation<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Study memes for high morale!<\h1>
+        <p id="course-material-text"> Henlo
+        <a href="https://www.reddit.com/r/dankmemes/"> take me!<\a><\p></div>
+    </div>`;
+}
+
 
 function displayOtherInfo(){
     reset();
