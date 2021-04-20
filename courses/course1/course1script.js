@@ -4,7 +4,6 @@ var container;
 
 function setup() {
     container = document.getElementById("content-container");
-    //displayCoursePlan();
 }
 
 function reset() {
