@@ -19,9 +19,10 @@
 }
 
 .calendar-header li {
-    color:white;
+    color: var(--color-bck);
     display: inline;
     padding: 5px;
+    padding-top: 7px;
     margin-left: 1px;
     cursor: default; 
     font-weight: bold;
@@ -29,7 +30,7 @@
 }
 
 .calendar-header li:hover {
-    filter: brightness(1.04);
+    background-color: var(--color-border-dark);
 }
 
 .calendar-header .date-picker-li {
@@ -37,11 +38,19 @@
 }
 
 .calendar-header input {
-    color:white;
+    color: var(--color-bck);
     border: none;
     font-weight: bold;
     background-color: var(--color-calendar-buttons);
     outline: none;
+}
+
+.calendar-header input:hover {
+    background-color: var(--color-border-dark);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 .calendar-header .left-button {
@@ -152,7 +161,7 @@
 .announcement-element, .assignment-element {
     display: grid;
     align-items: center;
-    height: 10%;
+    height: 8%;
 }
 
 .announcement-element, .assignment-element, .infobox-button {

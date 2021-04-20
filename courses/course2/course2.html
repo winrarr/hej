@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../generalstyles.css">
+    
     <link rel="stylesheet" href="course2styles.css">
+    <link rel="stylesheet" href="../../generalstyles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Document</title>
+    <script src="course2script.js"></script>
+    <title>Computerarkitektur, Netværk og Operativsystemer</title>
 </head>
 <body>
     <div class="navbar">
@@ -38,7 +39,41 @@
             </div>
         </div>
     </div>
-I am course 2
+    
+    <div class="coursepage">
+        <div class="sidenavcontainer">
+            <div class="sidenav">
+                <button onclick="displayCoursePlan()">Course plan</button>
+                <button onclick="alert('Open Handins');">Handins</button>
+                <button onclick="alert('Open announcements');">Announcements</button>
+                <button onclick="displayRecordings()">Recordings</button>
+                <button onclick="alert('Open course material');">Course material</button>
+                <button onclick="alert('Open Slides');">Slides</button>
+                <button onclick="displayOtherInfo()">Other Info</button>  
+            </div>
+        </div>
+        <div id="content-container"></div>
+
+        <div class="sidenavcontainer2">
+            <div class="sidenav2">
+                <div class="announcements">
+                    <p>ANNOUCNMENTs</p>
+                    <p>ANNOUCNMENTs</p>
+                    <p>ANNOUCNMENTs</p>
+                    <p>ANNOUCNMENTs</p>
+                    <p>ANNOUCNMENTs</p>
+                    <p>ANNOUCNMENTs</p>
+                </div>
+                <div class="handins">
+                    HANDING
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
 
     <footer>
         <div class="footeritem">
@@ -63,5 +98,6 @@ I am course 2
             <a href="https://studerende.au.dk/">Support</a>
         </div>
     </footer>
+    
 </body>
 </html>
