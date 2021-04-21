@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="generalstyles.css">
+    <link rel="stylesheet" href="frontpagestyles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
@@ -14,14 +15,14 @@
         </div>
     
         <ul class="course-items">
-            <li class="course1" onclick="alert('Goto Course1');">
-                <p>Computerarkitektur, Netværk og Operativsystemer</p>
+            <li class="course1" onclick="location.href='courses/course1/course1.html'">
+                <p>CompArk</p>
             </li>
-            <li class="course2" onclick="alert('Goto Course2');">
-                <p>Numerisk Lineær Algebra</p>
+            <li class="course2" onclick="location.href='courses/course2/course2.html'">
+                <p>LinAlg</p>
             </li>
-            <li class="course3" onclick="alert('Goto Course3');">
-                <p>Eksperimentel Systemudvikling</p>
+            <li class="course3" onclick="location.href='courses/course3/course3.html'">
+                <p>ExSys</p>
             </li>
         </ul>
 
@@ -103,10 +104,10 @@
                     <p class="infobox-text">Nuclear war breaks out</p>
                     <p class="infobox-text2">29/03/2021</p>
                 </div>
+                <button type="button" class="infobox-button" onclick="alert('Goto All Announcements');">
+                    All Announcements
+                </button>
             </div>
-            <button type="button" class="infobox-button" onclick="alert('Goto All Announcements');">
-                All Announcements
-            </button>
         </div>
         <div class="box">
             <div class="boxtitle">
@@ -114,57 +115,57 @@
             </div>
             <div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course2"></span>
+                    <span class="dot dot-course2">N</span>
                     <p class="infobox-text">Assignment 1</p>
-                    <p class="infobox-text">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">LinAlg</p>
                     <p class="infobox-text2">Today 18:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course1"></span>
+                    <span class="dot dot-course1">C</span>
                     <p class="infobox-text">Digital Logic Level</p>
-                    <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
+                    <p class="infobox-text">CompArk</p>
                     <p class="infobox-text2">Tomorrow 16:00</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course3"></span>
+                    <span class="dot dot-course3">E</span>
                     <p class="infobox-text">Artifact Ecology</p>
-                    <p class="infobox-text">Eksperimentel Systemudvikling</p>
+                    <p class="infobox-text">ExSys</p>
                     <p class="infobox-text2">25/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course2"></span>
+                    <span class="dot dot-course2">N</span>
                     <p class="infobox-text">Assignment 2</p>
-                    <p class="infobox-text">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">LinAlg</p>
                     <p class="infobox-text2">27/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course1"></span>
+                    <span class="dot dot-course1">C</span>
                     <p class="infobox-text">Microarchitecture</p>
-                    <p class="infobox-text">Computerarkitektur, Netværk og Operativsystemer</p>
+                    <p class="infobox-text">CompArk</p>
                     <p class="infobox-text2">30/05/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course3"></span>
+                    <span class="dot dot-course3">E</span>
                     <p class="infobox-text">Case Study</p>
-                    <p class="infobox-text">Eksperimentel Systemudvikling</p>
+                    <p class="infobox-text">ExSys</p>
                     <p class="infobox-text2">02/06/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course2"></span>
+                    <span class="dot dot-course2">N</span>
                     <p class="infobox-text">Assignment 3</p>
-                    <p class="infobox-text">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">LinAlg</p>
                     <p class="infobox-text2">25/07/2021</p>
                 </div>
                 <div onclick="alert('Goto Assignment');" class="assignment-element">
-                    <span class="dot dot-course2"></span>
+                    <span class="dot dot-course2">N</span>
                     <p class="infobox-text">Assignment 4</p>
-                    <p class="infobox-text">Numerisk Lineær Algebra</p>
+                    <p class="infobox-text">LinAlg</p>
                     <p class="infobox-text2">28/07/2021</p>
                 </div>
+                <button type="button" class="infobox-button" onclick="alert('Goto All Assignments');">
+                    All Assignments
+                </button>
             </div>
-            <button type="button" class="infobox-button" onclick="alert('Goto All Assignments');">
-                All Assignments
-            </button>
         </div>
     </div>
 
