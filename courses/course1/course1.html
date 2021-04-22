@@ -43,13 +43,13 @@
     <div class="coursepage">
         <div class="sidenavcontainer">
             <div class="sidenav">
-                <button onclick="displayCoursePlan()">Course plan</button>
-                <button onclick="alert('Open Handins');">Handins</button>
-                <button onclick="alert('Open announcements');">Announcements</button>
-                <button onclick="displayRecordings()">Recordings</button>
-                <button onclick="displayCourseMaterial();">Course Material</button>
-                <button onclick="alert('Open Slides');">Slides</button>
-                <button onclick="displayOtherInfo()">Other Info</button>  
+                <button id="default" onclick="displayCoursePlan(); highlight(this);">Course plan</button>
+                <button onclick="alert('Open Handins'); highlight(this);">Handins</button>
+                <button onclick="alert('Open announcements'); highlight(this);">Announcements</button>
+                <button onclick="displayRecordings(); highlight(this);">Recordings</button>
+                <button onclick="displayCourseMaterial(); highlight(this);">Course Material</button>
+                <button onclick="alert('Open Slides'); highlight(this);">Slides</button>
+                <button onclick="displayOtherInfo(); highlight(this);">Other Info</button>  
             </div>
         </div>
         <div id="content-container">

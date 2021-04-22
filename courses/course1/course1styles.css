@@ -8,6 +8,11 @@ body {
     min-height: 97vh;
 }
 
+.highlighted {
+    border-right: 5px solid black !important;
+    border-left: 5px solid white !important;
+}
+
 .sidenav, .sidenav2 {
     height: 78vh;
     top: 60px;
@@ -21,8 +26,9 @@ body {
 .sidenav button {
     height: 10%;
     margin: 5px;
-    font-size: 17px;
+    font-size: 16px;
     border-radius: 4px;
+    text-align: center;
     outline: none;
     border: none;
     background-color: rgb(255, 255, 255);

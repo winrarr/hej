@@ -1,14 +1,24 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
+var hightlightedbutton;
 
 function setup() {
     container = document.getElementById("content-container");
+    hightlightedbutton = document.getElementById("default");
+    highlight(hightlightedbutton);
+    console.log(hightlightedbutton);
     displayCoursePlan();
 }
 
 function reset() {
     container.innerHTML = "";
+}
+
+function highlight(el) {
+    hightlightedbutton.className = "";
+    el.className = "highlighted";
+    hightlightedbutton = el;
 }
 
 function displayCoursePlan() {
