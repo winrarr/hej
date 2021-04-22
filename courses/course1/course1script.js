@@ -135,6 +135,36 @@ function displayCourseMaterial(){
     </div>`;
 }
 
+function displayCourseSlides(){
+    reset();
+    container.innerHTML = `
+    <div id="slides">
+        <table id="slides-table">
+            <tr>
+                <th>Lecture #</th>
+                <th>Video</th>
+            </tr>
+            <tr>
+                <td>Lecture 1</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/intro-diego.pdf">Course introduction</td>
+            </tr>  
+            <tr>
+                <td>Lecture 2</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/logic-diego.pdf">Digital logic level</td>
+            </tr>  
+            <tr>
+                <td>Lecture 3</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">rickroll-blocker.msi</td>
+            </tr>  
+            <tr>
+                <td>Lecture 4</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/microp-diego.pdf">Micrco programming</td>
+            </tr>   
+        </table>
+    </div>`;
+
+}
+
 
 function displayOtherInfo(){
     reset();
