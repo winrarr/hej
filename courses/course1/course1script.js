@@ -81,21 +81,47 @@ function displayHandins(){
             </tr>
             <tr>
                 <td>Digital Logic Level</td>
-                <td><a href="">Choose document to submit</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
             </tr>  
             <tr>
                 <td>New assignment is available</td>
-                <td><a href="">Choose document to submit</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
             </tr>  
             <tr>
                 <td>Remember to download WinRar</td>
-                <td><a href="">Choose document to submit</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
             </tr>  
         </table>
     </div>`;
 }
 
-//decide whether or not to include announcements
+function displayAnnouncements(){
+    reset();
+    container.innerHTML = `
+    <div id="announcements">
+        <table id="announcements-table">
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td>The stone age</td>
+                <td>The lecture time this week has changed</td>
+            </tr>  
+            <tr>
+                <td>Today</td>
+                <td>New assignment is available</td>
+            </tr>  
+            <tr>
+                <td>22/3/2021</td>
+                <td>Remember to download WinRar</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
 function displayRecordings(){
     reset();

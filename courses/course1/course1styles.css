@@ -71,7 +71,8 @@ body {
 
 /* contains styling for multiple pages! */
 #content-table, #recordings-table,
-#slides-table, #handins-table {
+#slides-table, #handins-table,
+#announcements-table {
     border-collapse: collapse;
     width: 100%;
 }
@@ -80,7 +81,8 @@ body {
 #content-table td, #content-table th, 
 #recordings-table td, #recordings-table th, 
 #slides-table td, #slides-table th,
-#handins-table td, #handins-table th {
+#handins-table td, #handins-table th,
+#announcements-table td, #announcements-table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -89,17 +91,20 @@ body {
 #content-table tr:nth-child(even), 
 #recordings-table tr:nth-child(even),
 #slides-table tr:nth-child(even),
-#handins-table tr:nth-child(even)
+#handins-table tr:nth-child(even),
+#announcements-table tr:nth-child(even)
 {background-color: #f2f2f2;}
 
 /* contains styling for multiple pages! */
 #content-table tr:hover, #recordings-table tr:hover,
-#slides-table tr:hover, #handins-table tr:hover
- {background-color: #ddd;}
+#slides-table tr:hover, #handins-table tr:hover,
+#announcements-table tr:hover
+{background-color: #ddd;}
 
 /* contains styling for multiple pages! */
 #content-table th, #recordings-table th,
-#slides-table th, #handins-table th {
+#slides-table th, #handins-table th,
+#announcements-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
