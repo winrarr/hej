@@ -37,22 +37,22 @@ function displayCoursePlan(){
 
         //Lecture
         let lecture = document.createElement('td');
-        lecture.innerHTML = row;
+        lecture.innerHTML = "Experimental Systemdevelopment " + row;
         trow.appendChild(lecture);
 
         //Literature
         let literature = document.createElement('td');
-        literature.innerHTML = row;
+        literature.innerHTML = "Pages " + row*8 + "-"+(row*8+7);
         trow.appendChild(literature);
 
         //Slides
         let slides = document.createElement('td');
-        slides.innerHTML = row;
+        slides.innerHTML = `<button onclick="displayCourseSlides();">Slide ` + row +"</button>";
         trow.appendChild(slides);
 
         //Videos
         let videos = document.createElement('td');
-        videos.innerHTML = row;
+        videos.innerHTML = `<button onclick="displayRecordings();">Video ` + row +"</button>";
         trow.appendChild(videos);
 
         //Exercises
@@ -62,7 +62,7 @@ function displayCoursePlan(){
 
         //Assignments
         let assignments = document.createElement('td');
-        assignments.innerHTML = "none!";
+        assignments.innerHTML = "-";
         trow.appendChild(assignments);
     
         coursecontent.appendChild(trow);
@@ -78,21 +78,29 @@ function displayHandins(){
             <tr>
                 <th>Handin </th>
                 <th>Submit page link</th>
+                <th>Deadline</th>
+                <th>Status</th>
             </tr>
             <tr>
-                <td>Digital Logic Level</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                <td>Artifact ecology</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_3006323_1&mode=reset">
                 Choose document to submit</td>
+                <td>18/2/2021 kl 18:00</td>
+                <td>Godkendt</td>
+            </tr>
+            <tr>
+                <td>Case study</td>
+                <td><a href=https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_3006323_1&mode=reset">
+                Choose document to submit</td>
+                <td>11/3/2021 kl 18:00</td>
+                <td>Godkendt</td>
             </tr>  
             <tr>
-                <td>New assignment is available</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                <td>Aflevering 3</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_3006323_1&mode=reset">
                 Choose document to submit</td>
-            </tr>  
-            <tr>
-                <td>Remember to download WinRar</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
-                Choose document to submit</td>
+                <td>31/3/2021 kl 18:00</td>
+                <td>Godkendt</td>
             </tr>  
         </table>
     </div>`;
@@ -108,17 +116,17 @@ function displayAnnouncements(){
                 <th>Topic</th>
             </tr>
             <tr>
-                <td>The stone age</td>
-                <td>The lecture time this week has changed</td>
+                <td>20/4/2021</td>
+                <td>Hey, just wanted to tell you all that about a very specific subject. Namely, I want to tell you about</td>
             </tr>  
             <tr>
-                <td>Today</td>
-                <td>New assignment is available</td>
+                <td>12/04/2021</td>
+                <td>Lorem ipsum dolor!</td>
             </tr>  
             <tr>
-                <td>22/3/2021</td>
-                <td>Remember to download WinRar</td>
-            </tr>  
+                <td>29/3/2021</td>
+                <td>Nuclear war breaks out!</td>
+            </tr>
         </table>
     </div>`;
 }
@@ -134,27 +142,33 @@ function displayRecordings(){
             </tr>
             <tr>
                 <td>Lecture 1</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Course introduction</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                CSCW</td>
             </tr>  
             <tr>
                 <td>Lecture 2</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Actual Course introduction</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                CSCW gitlab</td>
             </tr>  
             <tr>
                 <td>Lecture 3</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">How to avoid getting rickrolled.exe</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                Virksomhed</td>
             </tr>  
             <tr>
                 <td>Lecture 4</td>
-                <td><a href="https://www.youtube.com/watch?v=Q3BCGijAO6E">Micrco programming</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                Activiy-based computing</td>
             </tr>  
             <tr>
                 <td>Lecture 5</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">never gonna</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                Plans and situated action</td>
             </tr>  
             <tr>
                 <td>Lecture 6</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">give you up</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2998498_1&mode=reset">
+                Ubiquitous computing</td>
             </tr>  
         </table>
     </div>`;
@@ -166,16 +180,16 @@ function displayCourseMaterial(){
     <div id="course-material-grid">
         <div id="course-material-items">
         <h1 id="course-material-header">Books<\h1>
-        <p id="course-material-text">We will be using 3 books...<\p></div>
+        <p id="course-material-text">We will be using no books...<\p></div>
         <div id="course-material-items">
         <h1 id="course-material-header">Copyrighted content<\h1>
-        <p id="course-material-text">There is none!<\p></div>
+        <p id="course-material-text">There is a lot! Do not share outside of this course!<\p></div>
         <div id="course-material-items">
         <h1 id="course-material-header">None-copyrighted content<\h1>
-        <p id="course-material-text">Also none!<\p></div>
+        <p id="course-material-text">Some!<\p></div>
         <div id="course-material-items">
         <h1 id="course-material-header">Optional content<\h1>
-        <p id="course-material-text">All that good intel architecture documentation<\p></div>
+        <p id="course-material-text">A tiny bit<\p></div>
         <div id="course-material-items">
         <h1 id="course-material-header">Study memes for high morale!<\h1>
         <p id="course-material-text"> Henlo
@@ -194,25 +208,28 @@ function displayCourseSlides(){
             </tr>
             <tr>
                 <td>Lecture 1</td>
-                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/intro-diego.pdf">Course introduction</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2994377_1&mode=reset">
+                Kursus introduktion</td>
             </tr>  
             <tr>
                 <td>Lecture 2</td>
-                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/logic-diego.pdf">Digital logic level</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2994377_1&mode=reset">
+                CSCW</td>
             </tr>  
             <tr>
                 <td>Lecture 3</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">rickroll-blocker.msi</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2994377_1&mode=reset">
+                Activity-based computing</td>
             </tr>  
             <tr>
                 <td>Lecture 4</td>
-                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/microp-diego.pdf">Micrco programming</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_2994377_1&mode=reset">
+                Virksomhedsteori</td>
             </tr>   
         </table>
     </div>`;
 
 }
-
 
 function displayOtherInfo(){
     reset();
@@ -230,22 +247,27 @@ function displayOtherInfo(){
 function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = `
-    <h3>Welcome</h3>
-    This course has three major parts and during each part, we will introduce you to one of the major components of modern computers. In the first part, we will focus on computer architecture where we will discuss the existing levels in the architecture of modern computers, as well as topics such as microprograms and assembly language. In the second part, we will focus on operating systems and we will go over a brief introduction of some major components of operating systems including processes, system calls, virtual memory and other important topics. In today's well-connected world, it is unthinkable to not be connected to internet which brings us to the final major topic: computer networks. Here, we will cover some of major components including different networking layers, sockets, TCP/PC and other topics.
-    `;
+    <h3>Velkommen til Eksperimentel Systemudvikling</h3>
+    <p>Formålet med kurset er at introducere jer til teorier, metoder, projekt og process modeller i forhold til udviklingen af interaktive systemer til at understøtte arbejde og praksis. Vi tager i kurset udgangspunkt i de mange udfordringer der er i forhold til software udvikling som praksis og så forståelsen af den praksis en given software løsning udvikles til. </p>
+    <p>Kurset vil gøre brug af gruppearbejde i øvelser og de løbende afleveringer, samt det endelige projekt og projektrapporten. Dele af arbejdsbyrden er tilpasset grupper på 4 medlemmer. Vi forventer at I selv danner grupper med 4 medlemmer indenfor de øvelseshold I er tilknyttet.  </p>
+    <p>Kurset bygger videre på de grundlæggende element i har med fra kurset Human-Computer Interaction og Softwarekonstruktion og softwarearkitektur. Vi forventer således at I forstår principper for både HCI og software arkitektur og kan anvende disse i kursets projektopgave(r).    </p>
+    <p>Kurset er også lidt anderledes en de tidligere år. Vi er i gang med at revidere kurset således at det er bedre integreret med HCI og giver et godt grundlag for jeres videre arbejde i bachelorprojekter og på jeres kandidatuddannelse. Dertil kommer at vi, pga. COVID, gennemføre kurset som fjernundervisning. Det betyder at der kan forekommer ændringer i kursusplanen for at imødekomme omstændighederne undervejs.    </p>
+    <p>En note om kommunikation og infrastruktur i kurset. Vi bruger Blackboard til officielle beskeder, afleveringer og centrale informationer. Zoom bruges til undervisning og møder, Slack til ad hoc koordinering mm. Alle steder identificerer vi os med vores navne (og ikke au-id, gamer-tags, twitch id, twitter eller instagram handle). Vi forsøger så vidt muligt at etablere en lærings- og kommunikationskultur hvor I bruger hinanden til spørgsmål og øvelser på Slack og Zoom. Er der spørgsmål til planen, opgaver, grupper mm. så skriv på Slack, så kan enten Henrik eller en TA hjælpe. I er velkommen til at kontakte Henrik ift. yderligere spørgsmål som DM på Slack eller aftale tid til et kort møde hvis der er særlige udfordringer der skal addresseres. Kontortid (på zoom) fremgår af listen af undervisere nedenfor.   </p>
+    <p>Vi glæder os rigtig meget til at komme i gang! </p>   
+    <p>- Henrik og resten af undervisningsteamet </p> `;
 }
 function otherInfoDisplayTools(){
     reset();
     container.innerHTML = `
-    <h3>Tools</h3>
-    The tools in this course will be introduced during TA exercises. This page will be updated when they are needed.
+    <h3>Værktøjer</h3>
+    <p>I kurset bruger vi Blackboard til formelle afleveringer, Zoom til forelæsninger, Slack til koordingering og ad hoc kommunikation, AU Gitlab til projekt dokumentation, sprints og backlogs, kode mm. </p>
     `;
 } 
 function otherInfoDisplayGroups(){
     reset();
     container.innerHTML = `
-    <h3>Groups</h3>
-    Here you can sign up for groups
+    <h3>Grupper</h3>
+    Her kan du tilmelde dig en gruppe
     <button onclick="alert('You have signed up for a group')">Sign Up for a random group</button>
     `;
 
@@ -253,34 +275,31 @@ function otherInfoDisplayGroups(){
 function otherInfoDisplayExam(){
     reset();
     container.innerHTML = `
-    <h3>Exam</h3>
-    <p>The exam will be extremely hard and you will all fail.</p>
-    <p>That is just how it is.</p>
-    <p>There will be 200 questions and you have to get 194 right to pass.
-    You have a generous timeframe of 16 minutes.</p>
+    <h3>Eksamen</h3>
+    <p>Information kommer senere</p>
     `;
 
 }
 function otherInfoDisplayContacts(){
     reset();
     container.innerHTML = `
-    <h3>Contacts</h3>
-    <p>The lecturer of this course is Johnny Johnson. Contact him at office 204 or by email: <a href="mailto: john@john.com">john@john.com</a></p>
-    <p>The TA's are Sabrina Jade and Kevin Koda, but dont contact them, they dont want that</p>
+    <h3>Kontakt</h3>
+    <p>Underviseren i dette kursus er Bobby Brandsen. Kontakt ham i kontor 204 eller ved email: <a href="mailto: bobby@bobby.com">bobby@bobby.com</a></p>
+    <p>TA's er Sabrina Jade og Kevin Koda, men har ingen kontakt information</p>
     `;
 }
 function otherInfoDisplayEvaluation(){
     reset();
     container.innerHTML = `
-    <h3>Evaluation</h3>
-    What do you rate the course?<br>
+    <h3>Evaluering</h3>
+    Hvad vil du give vores kursus?<br>
     <input type="radio" name="rating">1<br>
     <input type="radio" name="rating">2<br>
     <input type="radio" name="rating">3<br>
     <input type="radio" name="rating">4<br>
     <input type="radio" name="rating">5<br>
 
-    What could we do better?<br>
+    Hvad kan vi gøre bedre?<br>
     <input type="text"><br>
 
     <input type="submit">
