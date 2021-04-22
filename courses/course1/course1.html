@@ -3,10 +3,12 @@
 <head>
     
     <link rel="stylesheet" href="course1styles.css">
+    <link rel="stylesheet" href="../coursepagestyles.css">
     <link rel="stylesheet" href="../../generalstyles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="course1script.js"></script>
+    <script src="../coursepagescript.js"></script>
     <title>Computerarkitektur, Netværk og Operativsystemer</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
         </div>
     
         <ul class="course-items">
-            <li class="course1" onclick="location.href='course1.html'">
+            <li class="course1" onclick="location.href='../course1/course1.html'">
                 <p>CompArk</p>
             </li>
             <li class="course2" onclick="location.href='../course2/course2.html'">
@@ -42,14 +44,14 @@
     
     <div class="coursepage">
         <div class="sidenavcontainer">
-            <div class="sidenav">
-                <button onclick="displayCoursePlan()">Course plan</button>
-                <button onclick="displayHandins()">Handins</button>
-                <button onclick="displayAnnouncements();">Announcements</button>
-                <button onclick="displayRecordings()">Recordings</button>
-                <button onclick="displayCourseMaterial();">Course material</button>
-                <button onclick="displayCourseSlides();">Slides</button>
-                <button onclick="displayOtherInfo()">Other Info</button>  
+            <div class="sidenav">  
+                <button id="default" onclick="displayCoursePlan(); highlight(this);">Course plan</button>
+                <button onclick="displayHandins(); highlight(this);">Handins</button>
+                <button onclick="displayAnnouncements(); highlight(this);">Announcements</button>
+                <button onclick="displayRecordings(); highlight(this);">Recordings</button>
+                <button onclick="displayCourseMaterial(); highlight(this);">Course Material</button>
+                <button onclick="displayCourseSlides(); highlight(this);">Slides</button>
+                <button onclick="displayOtherInfo(); highlight(this);">Other Info</button>  
             </div>
         </div>
         <div id="content-container">
@@ -59,15 +61,16 @@
         <div class="sidenavcontainer2">
             <div class="sidenav2">
                 <div class="announcements">
-                    <p>ANNOUCNMENTs</p>
-                    <p>ANNOUCNMENTs</p>
-                    <p>ANNOUCNMENTs</p>
-                    <p>ANNOUCNMENTs</p>
-                    <p>ANNOUCNMENTs</p>
-                    <p>ANNOUCNMENTs</p>
+                    <p>Announcements</p>
+                    <div onclick="displayAnnouncements()">The lecture time this week has changed</div>
+                    <div onclick="displayAnnouncements()">New assignment is available</div>   
+                    <div onclick="displayAnnouncements()">Remember to download WinRar</div>                 
                 </div>
                 <div class="handins">
-                    HANDING
+                    <p>Handins</p>
+                    <div onclick="displayAnnouncements()">Digital Logic Level (21/5)</div>
+                    <div onclick="displayAnnouncements()">Microarchitecture (30/5)</div>   
+                    <div onclick="displayAnnouncements()">Microprocessor (9/7)</div>
                 </div>
             </div>
         </div>

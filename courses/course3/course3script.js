@@ -11,7 +11,7 @@ function reset() {
     container.innerHTML = "";
 }
 
-function displayCoursePlan() {
+function displayCoursePlan(){
     reset();
     container.innerHTML = `
     <table id='content-table'>
@@ -70,10 +70,58 @@ function displayCoursePlan() {
 
 }
 
-//decide whether or not to include handins
+function displayHandins(){
+    reset();
+    container.innerHTML = `
+    <div id="handins">
+        <table id="handins-table">
+            <tr>
+                <th>Handin </th>
+                <th>Submit page link</th>
+            </tr>
+            <tr>
+                <td>Digital Logic Level</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>New assignment is available</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>Remember to download WinRar</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
-
-//decide whether or not to include announcements
+function displayAnnouncements(){
+    reset();
+    container.innerHTML = `
+    <div id="announcements">
+        <table id="announcements-table">
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td>The stone age</td>
+                <td>The lecture time this week has changed</td>
+            </tr>  
+            <tr>
+                <td>Today</td>
+                <td>New assignment is available</td>
+            </tr>  
+            <tr>
+                <td>22/3/2021</td>
+                <td>Remember to download WinRar</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
 function displayRecordings(){
     reset();
@@ -112,6 +160,59 @@ function displayRecordings(){
     </div>`;
 }
 
+function displayCourseMaterial(){
+    reset();
+    container.innerHTML = `
+    <div id="course-material-grid">
+        <div id="course-material-items">
+        <h1 id="course-material-header">Books<\h1>
+        <p id="course-material-text">We will be using 3 books...<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Copyrighted content<\h1>
+        <p id="course-material-text">There is none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">None-copyrighted content<\h1>
+        <p id="course-material-text">Also none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Optional content<\h1>
+        <p id="course-material-text">All that good intel architecture documentation<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Study memes for high morale!<\h1>
+        <p id="course-material-text"> Henlo
+        <a href="https://www.reddit.com/r/dankmemes/"> take me!<\a><\p></div>
+    </div>`;
+}
+
+function displayCourseSlides(){
+    reset();
+    container.innerHTML = `
+    <div id="slides">
+        <table id="slides-table">
+            <tr>
+                <th>Lecture #</th>
+                <th>Video</th>
+            </tr>
+            <tr>
+                <td>Lecture 1</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/intro-diego.pdf">Course introduction</td>
+            </tr>  
+            <tr>
+                <td>Lecture 2</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/logic-diego.pdf">Digital logic level</td>
+            </tr>  
+            <tr>
+                <td>Lecture 3</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">rickroll-blocker.msi</td>
+            </tr>  
+            <tr>
+                <td>Lecture 4</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/microp-diego.pdf">Micrco programming</td>
+            </tr>   
+        </table>
+    </div>`;
+
+}
+
 
 function displayOtherInfo(){
     reset();
@@ -126,7 +227,7 @@ function displayOtherInfo(){
     </div>`;
 }
 
-function otherInfoDisplayIntroduction() {
+function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = `
     <h3>Welcome</h3>
@@ -140,7 +241,7 @@ function otherInfoDisplayTools(){
     The tools in this course will be introduced during TA exercises. This page will be updated when they are needed.
     `;
 } 
-function otherInfoDisplayGroups() {
+function otherInfoDisplayGroups(){
     reset();
     container.innerHTML = `
     <h3>Groups</h3>
@@ -149,7 +250,7 @@ function otherInfoDisplayGroups() {
     `;
 
 }
-function otherInfoDisplayExam() {
+function otherInfoDisplayExam(){
     reset();
     container.innerHTML = `
     <h3>Exam</h3>
@@ -160,7 +261,7 @@ function otherInfoDisplayExam() {
     `;
 
 }
-function otherInfoDisplayContacts() {
+function otherInfoDisplayContacts(){
     reset();
     container.innerHTML = `
     <h3>Contacts</h3>
@@ -168,7 +269,7 @@ function otherInfoDisplayContacts() {
     <p>The TA's are Sabrina Jade and Kevin Koda, but dont contact them, they dont want that</p>
     `;
 }
-function otherInfoDisplayEvaluation() {
+function otherInfoDisplayEvaluation(){
     reset();
     container.innerHTML = `
     <h3>Evaluation</h3>
