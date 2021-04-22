@@ -11,7 +11,7 @@ function reset() {
     container.innerHTML = "";
 }
 
-function displayCoursePlan() {
+function displayCoursePlan(){
     reset();
     container.innerHTML = `
     <table id='content-table'>
@@ -70,8 +70,30 @@ function displayCoursePlan() {
 
 }
 
-//decide whether or not to include handins
-
+function displayHandins(){
+    reset();
+    container.innerHTML = `
+    <div id="handins">
+        <table id="handins-table">
+            <tr>
+                <th>Handin </th>
+                <th>Submit page link</th>
+            </tr>
+            <tr>
+                <td>Digital Logic Level</td>
+                <td><a href="">Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>New assignment is available</td>
+                <td><a href="">Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>Remember to download WinRar</td>
+                <td><a href="">Choose document to submit</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
 //decide whether or not to include announcements
 
@@ -179,7 +201,7 @@ function displayOtherInfo(){
     </div>`;
 }
 
-function otherInfoDisplayIntroduction() {
+function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = `
     <h3>Welcome</h3>
@@ -193,7 +215,7 @@ function otherInfoDisplayTools(){
     The tools in this course will be introduced during TA exercises. This page will be updated when they are needed.
     `;
 } 
-function otherInfoDisplayGroups() {
+function otherInfoDisplayGroups(){
     reset();
     container.innerHTML = `
     <h3>Groups</h3>
@@ -202,7 +224,7 @@ function otherInfoDisplayGroups() {
     `;
 
 }
-function otherInfoDisplayExam() {
+function otherInfoDisplayExam(){
     reset();
     container.innerHTML = `
     <h3>Exam</h3>
@@ -213,7 +235,7 @@ function otherInfoDisplayExam() {
     `;
 
 }
-function otherInfoDisplayContacts() {
+function otherInfoDisplayContacts(){
     reset();
     container.innerHTML = `
     <h3>Contacts</h3>
@@ -221,7 +243,7 @@ function otherInfoDisplayContacts() {
     <p>The TA's are Sabrina Jade and Kevin Koda, but dont contact them, they dont want that</p>
     `;
 }
-function otherInfoDisplayEvaluation() {
+function otherInfoDisplayEvaluation(){
     reset();
     container.innerHTML = `
     <h3>Evaluation</h3>

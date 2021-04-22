@@ -69,32 +69,37 @@ body {
     padding: 60px;
 }
 
-/* contains course plan and recordings styling! */
-#content-table, #recordings-table, #slides-table {
+/* contains styling for multiple pages! */
+#content-table, #recordings-table,
+#slides-table, #handins-table {
     border-collapse: collapse;
     width: 100%;
 }
 
-/* contains course plan and recordings styling! */
+/* contains styling for multiple pages! */
 #content-table td, #content-table th, 
 #recordings-table td, #recordings-table th, 
-#slides-table td, #slides-table th {
+#slides-table td, #slides-table th,
+#handins-table td, #handins-table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-/* contains course plan and recordings styling! */
+/* contains styling for multiple pages! */
 #content-table tr:nth-child(even), 
 #recordings-table tr:nth-child(even),
-#slides-table tr:nth-child(even)
+#slides-table tr:nth-child(even),
+#handins-table tr:nth-child(even)
 {background-color: #f2f2f2;}
 
-/* contains course plan and recordings styling! */
+/* contains styling for multiple pages! */
 #content-table tr:hover, #recordings-table tr:hover,
-#slides-table tr:hover {background-color: #ddd;}
+#slides-table tr:hover, #handins-table tr:hover
+ {background-color: #ddd;}
 
-/* contains course plan and recordings styling! */
-#content-table th, #recordings-table th, #slides-table th {
+/* contains styling for multiple pages! */
+#content-table th, #recordings-table th,
+#slides-table th, #handins-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
