@@ -37,22 +37,32 @@ function displayCoursePlan(){
 
         //Lecture
         let lecture = document.createElement('td');
-        lecture.innerHTML = row;
+        if (row < 6) {
+            lecture.innerHTML = "Computerarchitechture " + row;
+        } else if (row < 10) {
+            lecture.innerHTML = "OS " + row;
+        } else {
+            lecture.innerHTML = "Networking " + row;
+        }
         trow.appendChild(lecture);
 
         //Literature
         let literature = document.createElement('td');
-        literature.innerHTML = row;
+        if (row % 2 == 0) {
+            literature.innerHTML = "Chapter " + (row/2+1);
+        } else {
+            literature.innerHTML = "-";
+        }
         trow.appendChild(literature);
 
         //Slides
         let slides = document.createElement('td');
-        slides.innerHTML = row;
+        slides.innerHTML = `<button onclick="displayCourseSlides();">Slide ` + row +"</button>";
         trow.appendChild(slides);
 
         //Videos
         let videos = document.createElement('td');
-        videos.innerHTML = row;
+        videos.innerHTML = `<button onclick="displayRecordings();">Video ` + row +"</button>";
         trow.appendChild(videos);
 
         //Exercises
@@ -62,9 +72,9 @@ function displayCoursePlan(){
 
         //Assignments
         let assignments = document.createElement('td');
-        assignments.innerHTML = "none!";
+        assignments.innerHTML = "-";
         trow.appendChild(assignments);
-    
+
         coursecontent.appendChild(trow);
     }
 
