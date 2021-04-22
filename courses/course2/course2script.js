@@ -11,7 +11,7 @@ function reset() {
     container.innerHTML = "";
 }
 
-function displayCoursePlan() {
+function displayCoursePlan(){
     reset();
     container.innerHTML = `
     <table id='content-table'>
@@ -37,22 +37,22 @@ function displayCoursePlan() {
 
         //Lecture
         let lecture = document.createElement('td');
-        lecture.innerHTML = row;
+        lecture.innerHTML = "Linear Algebra " + row;
         trow.appendChild(lecture);
 
         //Literature
         let literature = document.createElement('td');
-        literature.innerHTML = row;
+        literature.innerHTML = "Pages " + row*8 + "-"+(row*8+7);
         trow.appendChild(literature);
 
         //Slides
         let slides = document.createElement('td');
-        slides.innerHTML = row;
+        slides.innerHTML = `<button onclick="displayCourseSlides();">Slide ` + row +"</button>";
         trow.appendChild(slides);
 
         //Videos
         let videos = document.createElement('td');
-        videos.innerHTML = row;
+        videos.innerHTML = `<button onclick="displayRecordings();">Video ` + row +"</button>";
         trow.appendChild(videos);
 
         //Exercises
@@ -62,18 +62,81 @@ function displayCoursePlan() {
 
         //Assignments
         let assignments = document.createElement('td');
-        assignments.innerHTML = "none!";
+        assignments.innerHTML = "-";
         trow.appendChild(assignments);
-    
+
         coursecontent.appendChild(trow);
     }
 
 }
 
-//decide whether or not to include handins
+function displayHandins(){
+    reset();
+    container.innerHTML = `
+    <div id="handins">
+        <table id="handins-table">
+            <tr>
+                <th>Handin </th>
+                <th>Submit page link</th>
+            </tr>
+            <tr>
+                <td>Assignment 1</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>Assignment 2</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+            <tr>
+                <td>Assignment 3</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>
+            <tr>
+                <td>Assignment 4</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr> 
+            <tr>
+                <td>Assignment 5</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr> 
+            <tr>
+                <td>Assignment 6</td>
+                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
+                Choose document to submit</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
-
-//decide whether or not to include announcements
+function displayAnnouncements(){
+    reset();
+    container.innerHTML = `
+    <div id="announcements">
+        <table id="announcements-table">
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td>19/5</td>
+                <td>Handin 3 deadline extended</td>
+            </tr>  
+            <tr>
+                <td>26/4</td>
+                <td>Exams are cancelled</td>
+            </tr>  
+            <tr>
+                <td>10/2</td>
+                <td>Python is amazing :)</td>
+            </tr>  
+        </table>
+    </div>`;
+}
 
 function displayRecordings(){
     reset();
@@ -90,26 +153,75 @@ function displayRecordings(){
             </tr>  
             <tr>
                 <td>Lecture 2</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Actual Course introduction</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Errors</td>
             </tr>  
             <tr>
                 <td>Lecture 3</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">How to avoid getting rickrolled.exe</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Python introduction</td>
             </tr>  
             <tr>
                 <td>Lecture 4</td>
-                <td><a href="https://www.youtube.com/watch?v=Q3BCGijAO6E">Micrco programming</td>
+                <td><a href="https://www.youtube.com/watch?v=Q3BCGijAO6E">Vectors</td>
             </tr>  
             <tr>
                 <td>Lecture 5</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">never gonna</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Matrices</td>
             </tr>  
             <tr>
                 <td>Lecture 6</td>
-                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">give you up</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Matrix multiplication</td>
             </tr>  
         </table>
     </div>`;
+}
+
+function displayCourseMaterial(){
+    reset();
+    container.innerHTML = `
+    <div id="course-material-grid">
+        <div id="course-material-items">
+        <h1 id="course-material-header">Books<\h1>
+        <p id="course-material-text">We will be using no books...<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Copyrighted content<\h1>
+        <p id="course-material-text">There is none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">None-copyrighted content<\h1>
+        <p id="course-material-text">Also none!<\p></div>
+        <div id="course-material-items">
+        <h1 id="course-material-header">Optional content<\h1>
+        <p id="course-material-text">Nothing<\p></div>
+    </div>`;
+}
+
+function displayCourseSlides(){
+    reset();
+    container.innerHTML = `
+    <div id="slides">
+        <table id="slides-table">
+            <tr>
+                <th>Lecture #</th>
+                <th>Video</th>
+            </tr>
+            <tr>
+                <td>Lecture 1</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/intro-diego.pdf">Course introduction</td>
+            </tr>  
+            <tr>
+                <td>Lecture 2</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/logic-diego.pdf">Vectors</td>
+            </tr>  
+            <tr>
+                <td>Lecture 3</td>
+                <td><a href="https://www.youtube.com/watch?v=YddwkMJG1Jo">Matrixes</td>
+            </tr>  
+            <tr>
+                <td>Lecture 4</td>
+                <td><a href="https://blackboard.au.dk/bbcswebdav/courses/BB-Cou-UUVA-94698/slides/microp-diego.pdf">Matrix Multiplication</td>
+            </tr>   
+        </table>
+    </div>`;
+
 }
 
 
@@ -126,49 +238,49 @@ function displayOtherInfo(){
     </div>`;
 }
 
-function otherInfoDisplayIntroduction() {
+function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = `
     <h3>Welcome</h3>
-    This course has three major parts and during each part, we will introduce you to one of the major components of modern computers. In the first part, we will focus on computer architecture where we will discuss the existing levels in the architecture of modern computers, as well as topics such as microprograms and assembly language. In the second part, we will focus on operating systems and we will go over a brief introduction of some major components of operating systems including processes, system calls, virtual memory and other important topics. In today's well-connected world, it is unthinkable to not be connected to internet which brings us to the final major topic: computer networks. Here, we will cover some of major components including different networking layers, sockets, TCP/PC and other topics.
+    Lineær algebra er et centralt værktøj i matematisk modellering i mange naturvidenskabelige fag. Det handler om at formulere problemstillinger i termer af matricer og vektorer, og om metoder til at løse forskellige typer af matrixligninger.  Ofte ønsker man at udføre beregningerne ved hjælp af en computer og i denne forbindelse er der udviklet forskellige beregningsteknikker med særlige gode egenskaber for visse problemstillinger. Kurset vil introducere nogle af disse metoder, med fokus på hvordan disse teknikker kan anvendes via programmeringssproget Python. Relevante dele af den tilknyttede vektorrumsteori vil også blive indført.
     `;
 }
 function otherInfoDisplayTools(){
     reset();
     container.innerHTML = `
     <h3>Tools</h3>
-    The tools in this course will be introduced during TA exercises. This page will be updated when they are needed.
+    Python is awesome :)
     `;
 } 
-function otherInfoDisplayGroups() {
+function otherInfoDisplayGroups(){
     reset();
     container.innerHTML = `
     <h3>Groups</h3>
-    Here you can sign up for groups
+    Sign up for groups here. It will only be relevant in some assignments
     <button onclick="alert('You have signed up for a group')">Sign Up for a random group</button>
     `;
 
 }
-function otherInfoDisplayExam() {
+function otherInfoDisplayExam(){
     reset();
     container.innerHTML = `
     <h3>Exam</h3>
-    <p>The exam will be extremely hard and you will all fail.</p>
+    <p>The exam will be extremely easy.</p>
     <p>That is just how it is.</p>
-    <p>There will be 200 questions and you have to get 194 right to pass.
-    You have a generous timeframe of 16 minutes.</p>
+    <p>There will be 200 questions and you have to get 1 right to pass.
+    You have a generous timeframe of 20 minutes.</p>
     `;
 
 }
-function otherInfoDisplayContacts() {
+function otherInfoDisplayContacts(){
     reset();
     container.innerHTML = `
     <h3>Contacts</h3>
-    <p>The lecturer of this course is Johnny Johnson. Contact him at office 204 or by email: <a href="mailto: john@john.com">john@john.com</a></p>
-    <p>The TA's are Sabrina Jade and Kevin Koda, but dont contact them, they dont want that</p>
+    <p>The lecturer of this course is Jeremy Johnson. Contact him at office 208 or by email: <a href="mailto: john@john.com">john@john.com</a></p>
+    <p>The TA's are Sarah Jadern and Dennis Dingo, who have no phones or emails</p>
     `;
 }
-function otherInfoDisplayEvaluation() {
+function otherInfoDisplayEvaluation(){
     reset();
     container.innerHTML = `
     <h3>Evaluation</h3>

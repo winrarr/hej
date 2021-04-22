@@ -10,7 +10,7 @@
     
     --color-bck: #e3e5e9;
     --color-dark: #243c64;
-    --color-medium: #23395f;
+    --color-medium: #3e5885;
     --color-light: #aeb6c2; 
 
     --color-scroll-buton: #2a4470;
@@ -127,14 +127,13 @@ body {
     position: absolute;
     margin-right: 12px;
     right:0;
-    background-color: var(--color-medium);
-    border: 3px solid var(--color-border-dark) ;
+    border: 2px solid var(--color-border-dark) ;
 }
 
 .burger-dropdown button {
     color: white;
     font-size: 25px;
-    background-color: var(--color-medium);
+    background-color: var(--color-dark);
     outline: none;
     border: none;
 }
