@@ -38,21 +38,40 @@ body {
     background-color: var(--color-course1);
 }
 
+.sidenavcontainer2 {
+    background-color: var(--color-medium);
+}
+
 .sidenav2 {
-    display: grid;
-    grid-template-rows: 50% 50%;
     background-color: var(--color-medium);
 }
 
 .sidenav2 div {
-    background-color: var(--color-light);
-    border: 2px solid var(--color-border-light);
-    margin: 4px;
-    padding: 4px;
+    border: 0px solid var(--color-border-light);
+    margin: 15px;
 }
 
-.sidenavcontainer2 {
-    background-color: var(--color-medium);
+.sidenav2 div p {
+    padding: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2px;
+    color: white;
+    background-color: var(--color-dark);
+}
+
+.sidenav2 div div {
+    margin: 0;
+    margin-bottom: 2px;
+    padding: 5px;
+    background-color: var(--color-light);
+    font-size: 14px;
+    min-height: 28px;
+    cursor: pointer;
 }
 
 .coursecontent {
