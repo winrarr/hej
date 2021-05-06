@@ -1,15 +1,45 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
-var url = 'http://84.238.98.221:84/api/users'
+var url = 'http://84.238.98.221:84/api/course/'
+var courseJSONobject;
 
 function setup() {
     container = document.getElementById("content-container");
+    loadAllData();
     displayCoursePlan();
 }
 
 function reset() {
     container.innerHTML = "";
+}
+
+function getCourseAbbr(){
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    var page = page.slice(0,-5); // remove .html from string
+    switch (page) {
+        case "course1":
+            return "CompArk";
+        case "course2":
+            return "LinAlg";
+        case "course3":
+            return "ExSys";
+    }
+    return null;
+}
+function loadAllData(){
+    loadCourseData(function(data,err){
+
+    })
+}
+
+async function loadCourseData(){
+    abbreviation = getCourseAbbr();
+    let response = await fetch(url+abbreviation);
+    let responseText = await response.text();
+    responseText = responseText.substring(1,responseText.length-1);
+    courseJSONobject = JSON.parse(responseText);
 }
 
 function displayCoursePlan(){
@@ -82,12 +112,7 @@ function displayCoursePlan(){
 }
 
 function displayHandins(){
-    test();
-<<<<<<< HEAD:html/courses/course1/course1script.js
     reset();
-=======
-    /*reset();
->>>>>>> networkingtest:courses/course1/course1script.js
     container.innerHTML = `
     <div id="handins">
         <table id="handins-table">
@@ -111,25 +136,7 @@ function displayHandins(){
                 Choose document to submit</td>
             </tr>  
         </table>
-    </div>`;*/
-}
-
-function test(){
-    getStudents(function(data,err){
-
-    })
-}
-
-async function getStudents(callback) {
-    let response = await fetch(url);
-    let responseText = await response.text();
-    container.innerHTML = responseText;
-}
-
-async function test() {
-    let response = await fetch(url);
-    let responseText = await response.text();
-    console.log(responseText);
+    </div>`;
 }
 
 function displayAnnouncements(){
@@ -196,25 +203,7 @@ function displayRecordings(){
 
 function displayCourseMaterial(){
     reset();
-    container.innerHTML = `
-    <div id="course-material-grid">
-        <div id="course-material-items">
-        <h1 id="course-material-header">Books<\h1>
-        <p id="course-material-text">We will be using 3 books...<\p></div>
-        <div id="course-material-items">
-        <h1 id="course-material-header">Copyrighted content<\h1>
-        <p id="course-material-text">There is none!<\p></div>
-        <div id="course-material-items">
-        <h1 id="course-material-header">None-copyrighted content<\h1>
-        <p id="course-material-text">Also none!<\p></div>
-        <div id="course-material-items">
-        <h1 id="course-material-header">Optional content<\h1>
-        <p id="course-material-text">All that good intel architecture documentation<\p></div>
-        <div id="course-material-items">
-        <h1 id="course-material-header">Study memes for high morale!<\h1>
-        <p id="course-material-text"> Henlo
-        <a href="https://www.reddit.com/r/dankmemes/"> take me!<\a><\p></div>
-    </div>`;
+    container.innerHTML = courseJSONobject.material_text;
 }
 
 function displayCourseSlides(){
@@ -263,60 +252,26 @@ function displayOtherInfo(){
 
 function otherInfoDisplayIntroduction(){
     reset();
-    container.innerHTML = `
-    <h3>Welcome</h3>
-    This course has three major parts and during each part, we will introduce you to one of the major components of modern computers. In the first part, we will focus on computer architecture where we will discuss the existing levels in the architecture of modern computers, as well as topics such as microprograms and assembly language. In the second part, we will focus on operating systems and we will go over a brief introduction of some major components of operating systems including processes, system calls, virtual memory and other important topics. In today's well-connected world, it is unthinkable to not be connected to internet which brings us to the final major topic: computer networks. Here, we will cover some of major components including different networking layers, sockets, TCP/PC and other topics.
-    `;
+    container.innerHTML = courseJSONobject.intro_text;
 }
 function otherInfoDisplayTools(){
     reset();
-    container.innerHTML = `
-    <h3>Tools</h3>
-    The tools in this course will be introduced during TA exercises. This page will be updated when they are needed.
-    `;
+    container.innerHTML = courseJSONobject.tool_text;
 } 
 function otherInfoDisplayGroups(){
     reset();
-    container.innerHTML = `
-    <h3>Groups</h3>
-    Here you can sign up for groups
-    <button onclick="alert('You have signed up for a group')">Sign Up for a random group</button>
-    `;
-
+    container.innerHTML = courseJSONobject.group_text;
 }
 function otherInfoDisplayExam(){
     reset();
-    container.innerHTML = `
-    <h3>Exam</h3>
-    <p>The exam will be extremely hard and you will all fail.</p>
-    <p>That is just how it is.</p>
-    <p>There will be 200 questions and you have to get 194 right to pass.
-    You have a generous timeframe of 16 minutes.</p>
-    `;
+    container.innerHTML = courseJSONobject.exam_text;
 
 }
 function otherInfoDisplayContacts(){
     reset();
-    container.innerHTML = `
-    <h3>Contacts</h3>
-    <p>The lecturer of this course is Johnny Johnson. Contact him at office 204 or by email: <a href="mailto: john@john.com">john@john.com</a></p>
-    <p>The TA's are Sabrina Jade and Kevin Koda, but dont contact them, they dont want that</p>
-    `;
+    container.innerHTML = courseJSONobject.contact_text;
 }
 function otherInfoDisplayEvaluation(){
     reset();
-    container.innerHTML = `
-    <h3>Evaluation</h3>
-    What do you rate the course?<br>
-    <input type="radio" name="rating">1<br>
-    <input type="radio" name="rating">2<br>
-    <input type="radio" name="rating">3<br>
-    <input type="radio" name="rating">4<br>
-    <input type="radio" name="rating">5<br>
-
-    What could we do better?<br>
-    <input type="text"><br>
-
-    <input type="submit">
-    `;
+    container.innerHTML = courseJSONobject.eval_text;
 }
