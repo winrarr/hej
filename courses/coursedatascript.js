@@ -38,7 +38,6 @@ async function loadCourseData(){
     abbreviation = getCourseAbbr();
     let response = await fetch(url+abbreviation);
     let responseText = await response.text();
-    alert(responseText);
     responseText = responseText.substring(1,responseText.length-1);
     courseJSONobject = JSON.parse(responseText);
 }
