@@ -77,6 +77,7 @@ function removeActiveButton(parent) {
 function scrollWin(){
     let infoboxes = document.getElementById("infoboxes");
     infoboxes.scrollIntoView({behavior: "smooth"});
+<<<<<<< HEAD
 }
 
 function loadAllData(){
@@ -132,4 +133,6 @@ function setupAnnouncementSidebar(){
     </div>
     `;
     announcecontainer.innerHTML = string;
+=======
+>>>>>>> backend
 }
