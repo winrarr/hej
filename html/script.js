@@ -66,21 +66,5 @@ function removeActiveButton(parent) {
 
 function scrollWin(){
     let infoboxes = document.getElementById("infoboxes");
-    window.scrollTo({
-        top: findPos(infoboxes) - 64 - 10,
-        left: 0,
-        behavior: 'smooth'
-    });
-}
-
-function findPos(obj) {
-    let curtop = 0;
-
-    if (obj.offsetParent) {
-        do {
-            curtop += obj.offsetTop;
-        } while (obj = obj.offsetParent);
-
-        return curtop;
-    }
+    infoboxes.scrollIntoView({behavior: "smooth"});
 }
