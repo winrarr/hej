@@ -8,12 +8,13 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-app.use("/api/student", require("./routes/students.js"))
+app.use(express.static("../html"))
+app.use("/api", require("./routes/api.js"))
 
-app.use(function(req, res){
-    res.status(404);
-});
+app.use((req, res) => {
+    res.status(404).send()
+})
 
 app.listen(8000, () => {
     console.log("Server running on port 8000")
-});
+})

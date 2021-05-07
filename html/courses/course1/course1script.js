@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
+var url = 'http://84.238.98.221:84/api/users'
 
 function setup() {
     container = document.getElementById("content-container");
@@ -82,7 +83,11 @@ function displayCoursePlan(){
 
 function displayHandins(){
     test();
+<<<<<<< HEAD:html/courses/course1/course1script.js
     reset();
+=======
+    /*reset();
+>>>>>>> networkingtest:courses/course1/course1script.js
     container.innerHTML = `
     <div id="handins">
         <table id="handins-table">
@@ -106,7 +111,19 @@ function displayHandins(){
                 Choose document to submit</td>
             </tr>  
         </table>
-    </div>`;
+    </div>`;*/
+}
+
+function test(){
+    getStudents(function(data,err){
+
+    })
+}
+
+async function getStudents(callback) {
+    let response = await fetch(url);
+    let responseText = await response.text();
+    container.innerHTML = responseText;
 }
 
 async function test() {
