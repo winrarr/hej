@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', setup, false);
 
 var handinJSONonly8;
 var announceJSONonly8;
-var url = 'http://84.238.98.221:84/api/'
+var url = 'https://vm23.exsys2021.cs.au.dk/api/'
 
 function setup() {
     addCalendar();

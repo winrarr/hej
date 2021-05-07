@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
-var url = 'http://84.238.98.221:84/api/'
+var url = 'https://vm23.exsys2021.cs.au.dk/api/'
 var courseabbr;
 var courseJSON;
 var handinJSONonly3;
