@@ -8,7 +8,7 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-app.use(express.static("./html"))
+app.use(express.static("../html"))
 app.use("/api", require("./routes/api.js"))
 
 app.use((req, res) => {

@@ -1,8 +1,9 @@
 const routes = require('express').Router()
 
-routes.use("/course", require("./courses.js"))
-routes.use("/announcement", require("./announcements.js"))
-routes.use("/assignment", require("./assignments.js"))
+routes.use("/courses", require("./courses.js"))
+routes.use("/announcements", require("./announcements.js"))
+routes.use("/assignments", require("./assignments.js"))
+routes.use("/courseplan", require("./courseplan.js"))
 
 routes.use((req, res) => {
     res.status(404).send()
