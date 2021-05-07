@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
 var url = 'http://84.238.98.221:84/api/'
-var courseid;
+var courseabbr;
 var courseJSON;
 var handinJSONonly3;
 var announceJSONonly3;
@@ -11,7 +11,7 @@ var announceJSONall;
 
 function setup() {
     container = document.getElementById("content-container");
-    courseid = getCourseAbbr();
+    courseabbr = getCourseAbbr();
     loadAllData();
     displayCoursePlan();
 }
@@ -36,11 +36,11 @@ function getCourseAbbr(){
     var page = page.slice(0,-5); // remove .html from string
     switch (page) {
         case "course1":
-            return 1;
+            return "CompArk";
         case "course2":
-            return 2;
+            return "LinAlg";
         case "course3":
-            return 3;
+            return "EksSys";
     }
     return null;
 }
@@ -63,7 +63,7 @@ function loadAllData(){
 }
 
 async function loadCourseData(){
-    url2 = url + 'courses?id=' + courseid;
+    url2 = url + 'courses?abbreviation=' + courseabbr;
     let response = await fetch(url2);
     let responseText = await response.text();
     responseText = responseText.substring(1,responseText.length-1);
@@ -71,7 +71,7 @@ async function loadCourseData(){
 }
 
 async function load3Announcements(){
-    url2 = url + 'announcements?courseid=' + courseid +'&amount=3';
+    url2 = url + 'announcements?course=' + courseabbr +'&amount=3';
     let response = await fetch(url2);
     let responseText = await response.text();
     announceJSONonly3 = JSON.parse(responseText);
@@ -79,14 +79,14 @@ async function load3Announcements(){
 }
 
 async function loadAllAnnouncements(){
-    url2 = url + 'announcements?courseid=' + courseid;
+    url2 = url + 'announcements?course=' + courseabbr;
     let response = await fetch(url2);
     let responseText = await response.text();
     announceJSONall = JSON.parse(responseText);
 }
 
 async function load3Handins(){
-    url2 = url + 'assignments?courseid=' + courseid +'&amount=3';
+    url2 = url + 'assignments?course=' + courseabbr +'&amount=3';
     let response = await fetch(url2);
     let responseText = await response.text();
     handinJSONonly3 = JSON.parse(responseText);
@@ -94,7 +94,7 @@ async function load3Handins(){
 }
 
 async function loadAllHandins(){
-    url2 = url + 'assignments?courseid=' + courseid;
+    url2 = url + 'assignments?course=' + courseabbr;
     let response = await fetch(url2);
     let responseText = await response.text();
     handinJSONall = JSON.parse(responseText);
