@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
-var url = 'http://84.238.98.221:84/api/course/'
-var courseJSONobject;
+var url = 'http://84.238.98.221:84/api/'
+var courseid;
+var courseJSON;
+var handinJSONonly3;
+var announceJSONonly3;
+var handinJSONall;
+var announceJSONall;
 
 function setup() {
     container = document.getElementById("content-container");
+    courseid = getCourseAbbr();
     loadAllData();
     displayCoursePlan();
 }
@@ -14,17 +20,27 @@ function reset() {
     container.innerHTML = "";
 }
 
+function formatDate(input) {
+    var datearray = input.split("-");
+    return "(" + datearray[2] + "/" + datearray[1] + ")";
+}
+
+function formatDate2(input) {
+    var datearray = input.split("-");
+    return datearray[2] + "/" + datearray[1] + "-" + datearray[0];
+}
+
 function getCourseAbbr(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
     var page = page.slice(0,-5); // remove .html from string
     switch (page) {
         case "course1":
-            return "CompArk";
+            return 1;
         case "course2":
-            return "LinAlg";
+            return 2;
         case "course3":
-            return "ExSys";
+            return 3;
     }
     return null;
 }
@@ -32,14 +48,74 @@ function loadAllData(){
     loadCourseData(function(data,err){
 
     })
+    load3Handins(function(data,err){
+
+    })
+    load3Announcements(function(data,err){
+
+    })
+    loadAllHandins(function(data,err){
+
+    })
+    loadAllAnnouncements(function(data,err){
+
+    })
 }
 
 async function loadCourseData(){
-    abbreviation = getCourseAbbr();
-    let response = await fetch(url+abbreviation);
+    url2 = url + 'courses?id=' + courseid;
+    let response = await fetch(url2);
     let responseText = await response.text();
     responseText = responseText.substring(1,responseText.length-1);
-    courseJSONobject = JSON.parse(responseText);
+    courseJSON = JSON.parse(responseText);
+}
+
+async function load3Announcements(){
+    url2 = url + 'announcements?courseid=' + courseid +'&amount=3';
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    announceJSONonly3 = JSON.parse(responseText);
+    setupAnnouncementSidebar();
+}
+
+async function loadAllAnnouncements(){
+    url2 = url + 'announcements?courseid=' + courseid;
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    announceJSONall = JSON.parse(responseText);
+}
+
+async function load3Handins(){
+    url2 = url + 'assignments?courseid=' + courseid +'&amount=3';
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    handinJSONonly3 = JSON.parse(responseText);
+    setupHandinSidebar();
+}
+
+async function loadAllHandins(){
+    url2 = url + 'assignments?courseid=' + courseid;
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    handinJSONall = JSON.parse(responseText);
+}
+
+function setupHandinSidebar(){
+    handincontainer = document.getElementById("handins");
+    string = '<p>Handins</p>'
+    for (i = 0; i < 3; i++) {
+        string = string + '<div onclick="displayHandins()">' + handinJSONonly3[i].title + ' ' + formatDate(handinJSONonly3[i].deadline) + '</div>'
+    }
+    handincontainer.innerHTML = string;
+}
+
+function setupAnnouncementSidebar(){
+    announcecontainer = document.getElementById("announcements");
+    string = '<p>Announcements</p>'
+    for (i = 0; i < 3; i++) {
+        string = string + '<div onclick="displayAnnouncements()">' + announceJSONonly3[i].title + ' ' + formatDate(announceJSONonly3[i].date) + '</div>'
+    }
+    announcecontainer.innerHTML = string;
 }
 
 function displayCoursePlan(){
@@ -113,55 +189,42 @@ function displayCoursePlan(){
 
 function displayHandins(){
     reset();
-    container.innerHTML = `
+    string = `
     <div id="handins">
         <table id="handins-table">
             <tr>
                 <th>Handin </th>
-                <th>Submit page link</th>
+                <th>Deadline </th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Submit</th>
             </tr>
-            <tr>
-                <td>Digital Logic Level</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
-                Choose document to submit</td>
-            </tr>  
-            <tr>
-                <td>New assignment is available</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
-                Choose document to submit</td>
-            </tr>  
-            <tr>
-                <td>Remember to download WinRar</td>
-                <td><a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145314_1&content_id=_2887280_1&mode=reset">
-                Choose document to submit</td>
-            </tr>  
-        </table>
-    </div>`;
+    `;
+
+    for (i = 0; i < handinJSONall.length; i++) {
+        string = string + "<tr><td>" + handinJSONall[i].title + "</td><td>" + formatDate2(handinJSONall[i].deadline) + "</td><td>" + handinJSONall[i].description + "</td><td>Not handed in</td><td>" + `<button onclick="alert('Submit')">Submit</button></tr>`
+    }
+    string = string + "</table></div>";
+    container.innerHTML = string;
 }
 
 function displayAnnouncements(){
     reset();
-    container.innerHTML = `
+    string = `
     <div id="announcements">
         <table id="announcements-table">
             <tr>
-                <th>Date</th>
-                <th>Topic</th>
+                <th>Title </th>
+                <th>Date </th>
+                <th>Text</th>
             </tr>
-            <tr>
-                <td>The stone age</td>
-                <td>The lecture time this week has changed</td>
-            </tr>  
-            <tr>
-                <td>Today</td>
-                <td>New assignment is available</td>
-            </tr>  
-            <tr>
-                <td>22/3/2021</td>
-                <td>Remember to download WinRar</td>
-            </tr>  
-        </table>
-    </div>`;
+    `;
+
+    for (i = 0; i < announceJSONall.length; i++) {
+        string = string + "<tr><td>" + announceJSONall[i].title + "</td><td>" + formatDate2(announceJSONall[i].date) + "</td><td>" + announceJSONall[i].text + "</td></tr>";
+    }
+    string = string + "</table></div>";
+    container.innerHTML = string;;
 }
 
 function displayRecordings(){
@@ -203,7 +266,7 @@ function displayRecordings(){
 
 function displayCourseMaterial(){
     reset();
-    container.innerHTML = courseJSONobject.material_text;
+    container.innerHTML = courseJSON.materialtext;
 }
 
 function displayCourseSlides(){
@@ -252,26 +315,26 @@ function displayOtherInfo(){
 
 function otherInfoDisplayIntroduction(){
     reset();
-    container.innerHTML = courseJSONobject.intro_text;
+    container.innerHTML = courseJSON.introtext;
 }
 function otherInfoDisplayTools(){
     reset();
-    container.innerHTML = courseJSONobject.tool_text;
+    container.innerHTML = courseJSON.tooltext;
 } 
 function otherInfoDisplayGroups(){
     reset();
-    container.innerHTML = courseJSONobject.group_text;
+    container.innerHTML = courseJSON.grouptext;
 }
 function otherInfoDisplayExam(){
     reset();
-    container.innerHTML = courseJSONobject.exam_text;
+    container.innerHTML = courseJSON.examtext;
 
 }
 function otherInfoDisplayContacts(){
     reset();
-    container.innerHTML = courseJSONobject.contact_text;
+    container.innerHTML = courseJSON.contacttext;
 }
 function otherInfoDisplayEvaluation(){
     reset();
-    container.innerHTML = courseJSONobject.eval_text;
+    container.innerHTML = courseJSON.evaltext;
 }

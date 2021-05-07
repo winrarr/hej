@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
+var handinJSONonly8;
+var announceJSONonly8;
+var url = 'http://84.238.98.221:84/api/'
+
 function setup() {
     addCalendar();
+    loadAllData();
+}
+
+function formatDate2(input) {
+    var datearray = input.split("-");
+    return datearray[2] + "/" + datearray[1] + "-" + datearray[0];
 }
 
 function addCalendar() {
@@ -98,4 +108,59 @@ function addStudent() {
             name: "Rasmus"
         })
     });
+}
+
+function loadAllData(){
+    load8Handins(function(data,err){
+
+    })
+    load8Announcements(function(data,err){
+
+    })
+}
+
+async function load8Handins(){
+    url2 = url + 'assignments?amount=8';
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    handinJSONonly8 = JSON.parse(responseText);
+    setupHandinSidebar();
+}
+
+async function load8Announcements(){
+    url2 = url + 'announcements?amount=8';
+    let response = await fetch(url2);
+    let responseText = await response.text();
+    announceJSONonly8 = JSON.parse(responseText);
+    setupAnnouncementSidebar();
+}
+
+function setupHandinSidebar(){
+    /*
+    handincontainer = document.getElementById("handins");
+    string = '<p>Handins</p>'
+    for (i = 0; i < 3; i++) {
+        string = string + '<div onclick="displayHandins()">' + handinJSONonly3[i].title + ' ' + formatDate(handinJSONonly3[i].deadline) + '</div>'
+    }
+    handincontainer.innerHTML = string;*/
+}
+
+function setupAnnouncementSidebar(){
+    announcecontainer = document.getElementById("announcements");
+    string = '<div class="boxtitle">Announcements</div><div>'
+    for (i = 0; i < 8; i++) {
+        string = string + `
+        <div onclick="alert('Goto Announcement');" class="announcement-element">
+            <p class="infobox-text">` + announceJSONonly8[i].title + `</p>
+            <p class="infobox-text2">` + formatDate2(announceJSONonly8[i].date) + `</p>
+        </div>
+        `;
+    }
+    string = string + `
+        <button type="button" class="infobox-button" onclick="alert('Goto All Announcements');">
+            All Announcements
+        </button>
+    </div>
+    `;
+    announcecontainer.innerHTML = string;
 }
