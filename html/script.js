@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', setup, false);
 
 var handinJSONonly8;
 var announceJSONonly8;
-var url = 'http://84.238.98.221:84/api/'
+var url = 'https://vm23.exsys2021.cs.au.dk/api/'
 
 function setup() {
     addCalendar();
@@ -105,25 +105,65 @@ async function load8Announcements(){
 }
 
 function setupHandinSidebar(){
-    /*
     handincontainer = document.getElementById("handins");
-    string = '<p>Handins</p>'
-    for (i = 0; i < 3; i++) {
-        string = string + '<div onclick="displayHandins()">' + handinJSONonly3[i].title + ' ' + formatDate(handinJSONonly3[i].deadline) + '</div>'
+    string = '<div class="boxtitle">Assignments</div><div>'
+    for (i = 0; i < 8; i++) {
+        string = string + `<div onclick="alert('`+handinJSONonly8[i].description+`');" class="announcement-element">`;
+
+        switch (handinJSONonly8[i].courseabbr) {
+            case "EksSys":
+                string = string + '<span class="dot dot-course3">';
+                break;
+            case "LinAlg":
+                string = string + '<span class="dot dot-course2">';
+                break;
+            case "CompArk":
+                string = string + '<span class="dot dot-course1">';
+                break;
+        }
+
+        string = string + handinJSONonly8[i].courseabbr.charAt(0) + "</span>" + `
+            <p class="infobox-text">` + handinJSONonly8[i].title + `</p>
+            <p class="infobox-text">` + handinJSONonly8[i].courseabbr + `</p>
+            <p class="infobox-text2">` + formatDate2(handinJSONonly8[i].deadline) + `</p>
+        </div>
+        `;
+        
     }
-    handincontainer.innerHTML = string;*/
+    string = string + `
+        <button type="button" class="infobox-button" onclick="alert('Goto All Handins');">
+            All Handins
+        </button>
+    </div>
+    `;
+    handincontainer.innerHTML = string;
 }
 
 function setupAnnouncementSidebar(){
     announcecontainer = document.getElementById("announcements");
     string = '<div class="boxtitle">Announcements</div><div>'
     for (i = 0; i < 8; i++) {
-        string = string + `
-        <div onclick="alert('Goto Announcement');" class="announcement-element">
+        string = string + `<div onclick="alert('`+announceJSONonly8[i].text+`');" class="announcement-element">`;
+
+        switch (announceJSONonly8[i].courseabbr) {
+            case "EksSys":
+                string = string + '<span class="dot dot-course3">';
+                break;
+            case "LinAlg":
+                string = string + '<span class="dot dot-course2">';
+                break;
+            case "CompArk":
+                string = string + '<span class="dot dot-course1">';
+                break;
+        }
+
+        string = string + announceJSONonly8[i].courseabbr.charAt(0) + "</span>" + `
             <p class="infobox-text">` + announceJSONonly8[i].title + `</p>
+            <p class="infobox-text">` + announceJSONonly8[i].courseabbr + `</p>
             <p class="infobox-text2">` + formatDate2(announceJSONonly8[i].date) + `</p>
         </div>
         `;
+        
     }
     string = string + `
         <button type="button" class="infobox-button" onclick="alert('Goto All Announcements');">
@@ -131,5 +171,6 @@ function setupAnnouncementSidebar(){
         </button>
     </div>
     `;
+
     announcecontainer.innerHTML = string;
 }
