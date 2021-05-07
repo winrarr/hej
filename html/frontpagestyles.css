@@ -184,7 +184,7 @@
 }
 
 .announcement-element {
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 6% 49% 20% 25%;
 }
 
 .assignment-element{
