@@ -1,6 +1,7 @@
 const routes = require('express').Router();
 const db = require("../database/database.js")
 
+
 routes.get("", async (req, res) => {
     const sql =
     `select * from courseplanelement
