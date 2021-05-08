@@ -2,7 +2,7 @@ const routes = require('express').Router();
 const db = require("../database/database.js")
 
 
-routes.get("", async (req, res) => {
+routes.get("", (req, res) => {
     const id = req.query.id
     const courseabbr = req.query.course
     let amount = req.query.amount
