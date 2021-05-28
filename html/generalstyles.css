@@ -70,6 +70,8 @@ body {
     padding: 0px;
 }
 
+
+
 .course-items li {
     min-width: 100px;
     display: flex;
@@ -81,7 +83,6 @@ body {
     border-bottom-width: 6px;
     border-bottom-style: solid;
     justify-content: center;
-
 }
 
 .course-items li:hover {
@@ -95,6 +96,10 @@ body {
     color: white;
 }
 
+.allcourses {
+    border-bottom-color: var(--color-border-light);
+}
+
 .course1 {
     border-bottom-color: var(--color-course1);
 }
@@ -106,6 +111,7 @@ body {
 .course3 {
     border-bottom-color: var(--color-course3);
 }
+
 
 
 .profile {
