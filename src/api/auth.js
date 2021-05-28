@@ -21,8 +21,12 @@ routes.post("/register", (req, res) => {
     res.send(addSession())
 })
 
+routes.post("/logout", (req, res) => {
+    removeSession(getSession(req.headers.cookie))
+})
+
 function auth(req, res, next) {
-    let s = getCookie(req.headers.cookie, "session")
+    let s = getSession(req.headers.cookie)
     if (sessions.includes(s)) {
         next()
     } else {
@@ -30,8 +34,8 @@ function auth(req, res, next) {
     }
 }
 
-function getCookie(cookie, name) {
-    var match = cookie.match('(^| )' + name + '=([^;]+)');
+function getSession(cookie) {
+    var match = cookie.match('(^| )session=([^;]+)');
     if (match) return match[2];
   }
 
@@ -47,4 +51,7 @@ function removeSession(session) {
     sessions.splice(sessions.indexOf(session), 1)
 }
 
-module.exports = routes
+module.exports = {
+    routes: routes,
+    sessions: sessions,
+}
