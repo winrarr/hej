@@ -188,7 +188,7 @@ function displayOtherInfo(){
     container.innerHTML = `
     <div id="other-info">
         <button onclick="otherInfoDisplayIntroduction()">Introduction to Course</button>
-        <button onclick="otherInfoDisplayTools()">Tools</button>
+        <button onclick="otherInfoDisplaySoftware()">Software</button>
         <button onclick="otherInfoDisplayGroups()">Groups</button>
         <button onclick="otherInfoDisplayExam()">Exam</button>
         <button onclick="otherInfoDisplayContacts()">Contacts</button>
@@ -200,7 +200,7 @@ function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = courseJSON.introtext;
 }
-function otherInfoDisplayTools(){
+function otherInfoDisplaySoftware(){
     reset();
     container.innerHTML = courseJSON.tooltext;
 } 
