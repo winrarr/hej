@@ -27,21 +27,6 @@ async function login() {
     location.href = "frontpage.html"
 }
 
-async function register() {
-    let session = await fetch("/register", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            username: document.getElementById("username").value,
-            hPass: await sha256(document.getElementById("password").value),
-        })
-    })
-
-    document.cookie = "session=" + await session.text()
-
-    location.href = "frontpage.html"
-}
-
 async function sha256(message) {
     const msgBuffer = new TextEncoder().encode(message)
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
