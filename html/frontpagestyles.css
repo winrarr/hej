@@ -140,13 +140,14 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 20px;
+    height: 700px;
 }
 
 .box {
     margin: 20px;
     border: 0px solid var(--color-medium);   
     padding: 5px;
-    height: 84vh;
+    height: 75vh;
     display: grid;
     grid-template-rows: 10% 90%;
 }
