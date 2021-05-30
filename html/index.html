@@ -1,100 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="generalstyles.css">
-    <link rel="stylesheet" href="frontpagestyles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="generalstyles.css" />
+    <link rel="stylesheet" href="frontpagestyles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <div onclick="location.href='index.html'" class="logo">
-            Studerende.dk
-        </div>
-    
-        <ul class="course-items">
-            <li class="course1" onclick="location.href='courses/course1/course1.html'">
-                <p>CompArk</p>
-            </li>
-            <li class="course2" onclick="location.href='courses/course2/course2.html'">
-                <p>LinAlg</p>
-            </li>
-            <li class="course3" onclick="location.href='courses/course3/course3.html'">
-                <p>EksSys</p>
-            </li>
-        </ul>
+      <div onclick="location.href='index.html'" class="logo">Studerende.dk</div>
 
-        
-        <div class="profile">
-            <img src="img/menu.png">
-            <div class="burger-dropdown">
-                <button onclick="alert('Goto Profile');">Profile</button>
-                <button onclick="alert('Goto Post');">Post</button>
-                <button onclick="alert('Goto All Courses');">Courses</button>
-                <button onclick="alert('Goto Settings');">Settings</button>
-                <button onclick="alert('Log Out of the website');">Log Out</button>
-            </div>
+      <ul class="course-items">
+        <li
+          class="course1"
+          onclick="location.href='courses/course1/course1.html'"
+        >
+          <p>CompArk</p>
+        </li>
+        <li
+          class="course2"
+          onclick="location.href='courses/course2/course2.html'"
+        >
+          <p>LinAlg</p>
+        </li>
+        <li
+          class="course3"
+          onclick="location.href='courses/course3/course3.html'"
+        >
+          <p>EksSys</p>
+        </li>
+      </ul>
+
+      <div class="profile">
+        <img src="img/menu.png" />
+        <div class="burger-dropdown">
+          <button onclick="alert('Goto Profile');">Profile</button>
+          <button onclick="alert('Goto Post');">Post</button>
+          <button onclick="alert('Goto All Courses');">Courses</button>
+          <button onclick="alert('Goto Settings');">Settings</button>
+          <button onclick="alert('Log Out of the website');">Log Out</button>
         </div>
+      </div>
     </div>
 
     <div class="calendar-div">
-        <div class="calendar-header">
-            <ul class="calendar-header-left horizontal-list">
-                <li class="left-button" onclick="previousWeek()">Previous week</li>
-                <li class="date-picker-li"><input type="date"></li>
-                <li class="right-button" onclick="nextWeek()">Next week</li>
-            </ul>
-            <ul class="horizontal-list">
-                <li onclick="setActiveButton(this)" class="left-button active-button">Week</li>
-                <li onclick="setActiveButton(this)">Month</li>
-                <li onclick="setActiveButton(this)" class="right-button">Semester</li>
-            </ul>
-        </div>
-        <div id="calendar" class="calendar-table">
-            <div class="calendar-table-header">WEEK 12</div>
-            <div class="calendar-table-header">MONDAY 22</div>
-            <div class="calendar-table-header">TUESDAY 23</div>
-            <div class="calendar-table-header">WEDNESDAY 24</div>
-            <div class="calendar-table-header">THURSDAY 25</div>
-            <div class="calendar-table-header">FRIDAY 26</div>
-            <div class="calendar-table-header">SATURDAY 27</div>
-            <div class="calendar-table-header">SUNDAY 28</div>
-        </div>
+      <div class="calendar-header">
+        <ul class="calendar-header-left horizontal-list">
+          <li class="left-button" onclick="previousWeek()">Previous week</li>
+          <li class="date-picker-li"><input type="date" /></li>
+          <li class="right-button" onclick="nextWeek()">Next week</li>
+        </ul>
+        <ul class="horizontal-list">
+          <li onclick="setActiveButton(this)" class="left-button active-button">
+            Week
+          </li>
+          <li onclick="setActiveButton(this)">Month</li>
+          <li onclick="setActiveButton(this)" class="right-button">Semester</li>
+        </ul>
+      </div>
+      <div id="calendar" class="calendar-table">
+        <div class="calendar-table-header">WEEK 12</div>
+        <div class="calendar-table-header">MONDAY 22</div>
+        <div class="calendar-table-header">TUESDAY 23</div>
+        <div class="calendar-table-header">WEDNESDAY 24</div>
+        <div class="calendar-table-header">THURSDAY 25</div>
+        <div class="calendar-table-header">FRIDAY 26</div>
+        <div class="calendar-table-header">SATURDAY 27</div>
+        <div class="calendar-table-header">SUNDAY 28</div>
+      </div>
     </div>
     <div id="scroll-div">
-        <button class="scroll-button" onclick="scrollWin(this)"><i class="arrowdown"></i></button>
+      <button class="scroll-button" onclick="scrollWin(this)">
+        <i class="arrowdown"></i>
+      </button>
     </div>
     <div id="infoboxes">
-        <div class="box" id="announcements">
-        </div>
-        <div class="box" id="handins">
-        </div>
+      <div class="box" id="announcements"></div>
+      <div class="box" id="handins"></div>
     </div>
 
-    <footer id ="footer">
-        <div class="footeritem">
-            <a href="https://sbstads.au.dk/sb_STAP/sb">STADS</a>
-        </div>
-        <div class="footeritem">
-            <a href="https://library.au.dk/">AU Library</a>
-        </div>
-        <div class="footeritem">
-            <a href="https://bss.au.dk/en/programmes/study-environment-and-student-life/campus-life/social-events/">Social</a>
-        </div>
-        <div class="footeritem">
-            <img src="img/logomini.png" style="height: 40px;">  
-        </div>
-        <div class="footeritem">
-            <a href="https://www.google.com/search?q=privacy+google&rlz=1C1GCEA_enDK886DK887&sxsrf=ALeKk00OQF-RG1dM0HtcoasDElPwXx98qg:1616948475457&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjykv-7stPvAhUhpIsKHYCxAVMQ_AUoAXoECAEQAw&biw=1536&bih=754">Privacy</a>
-        </div>
-        <div class="footeritem">
-            <a href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_3055192_1&mode=reset">About</a>
-        </div>
-        <div class="footeritem">
-            <a href="https://studerende.au.dk/">Support</a>
-        </div>
+    <footer id="footer">
+      <div class="footeritem">
+        <a href="https://sbstads.au.dk/sb_STAP/sb">STADS</a>
+      </div>
+      <div class="footeritem">
+        <a href="https://library.au.dk/">AU Library</a>
+      </div>
+      <div class="footeritem">
+        <a
+          href="https://bss.au.dk/en/programmes/study-environment-and-student-life/campus-life/social-events/"
+          >Social</a
+        >
+      </div>
+      <div class="footeritem">
+        <img src="img/logomini.png" style="height: 40px" />
+      </div>
+      <div class="footeritem">
+        <a
+          href="https://www.google.com/search?q=privacy+google&rlz=1C1GCEA_enDK886DK887&sxsrf=ALeKk00OQF-RG1dM0HtcoasDElPwXx98qg:1616948475457&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjykv-7stPvAhUhpIsKHYCxAVMQ_AUoAXoECAEQAw&biw=1536&bih=754"
+          >Privacy</a
+        >
+      </div>
+      <div class="footeritem">
+        <a
+          href="https://blackboard.au.dk/webapps/blackboard/content/listContent.jsp?course_id=_145325_1&content_id=_3055192_1&mode=reset"
+          >About</a
+        >
+      </div>
+      <div class="footeritem">
+        <a href="https://studerende.au.dk/">Support</a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

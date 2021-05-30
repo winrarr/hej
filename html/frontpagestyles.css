@@ -1,227 +1,228 @@
 /* CALENDAR */
 
 .calendar-div {
-    margin: 2% 4% 0% 4%;
+  margin: 2% 4% 0% 4%;
 }
 
 .calendar-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calendar-header ul {
-    margin-bottom: 3px;
-    display: flex;
+  margin-bottom: 3px;
+  display: flex;
 }
 
 .calendar-header-left {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .calendar-header li {
-    color: var(--color-bck);
-    display: inline;
-    padding: 5px;
-    padding-top: 7px;
-    margin-left: 1px;
-    cursor: default; 
-    font-weight: bold;
-    background-color: var(--color-calendar-buttons);
+  color: var(--color-bck);
+  display: inline;
+  padding: 5px;
+  padding-top: 7px;
+  margin-left: 1px;
+  cursor: default;
+  font-weight: bold;
+  background-color: var(--color-calendar-buttons);
 }
 
 .calendar-header li:hover {
-    background-color: var(--color-border-dark);
+  background-color: var(--color-border-dark);
 }
 
 .calendar-header li:hover input {
-    background-color: var(--color-border-dark);
+  background-color: var(--color-border-dark);
 }
 
 .calendar-header .date-picker-li {
-    padding: 4px;
+  padding: 4px;
 }
 
 .calendar-header input {
-    color: var(--color-bck);
-    border: none;
-    font-weight: bold;
-    background-color: var(--color-calendar-buttons);
-    outline: none;
+  color: var(--color-bck);
+  border: none;
+  font-weight: bold;
+  background-color: var(--color-calendar-buttons);
+  outline: none;
 }
 
 ::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 .calendar-header .left-button {
-    border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .calendar-header .right-button {
-    border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .active-button {
-    box-shadow: inset 0px 3px var(--color-border-light);
+  box-shadow: inset 0px 3px var(--color-border-light);
 }
-
 
 /* CALENDAR TABLE */
 
 .calendar-table {
-    display: grid;
-    grid-template-columns: 90px repeat(7, 1fr);
-    grid-template-rows: 42px repeat(9, 1fr);
-    height: 72vh;
-    min-height: 450px;
+  display: grid;
+  grid-template-columns: 90px repeat(7, 1fr);
+  grid-template-rows: 42px repeat(9, 1fr);
+  height: 72vh;
+  min-height: 450px;
 }
 
 .calendar-table-item {
-    border: 1px solid var(--color-bck);
-    background-color: var(--color-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid var(--color-bck);
+  background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .calendar-table-header {
-    background-color: var(--color-dark);
-    border: 1px solid var(--color-bck);
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-bck);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calendar-table-row-header {
-    height: 40px;
+  height: 40px;
 }
 
 .today {
-    background-color: var(--color-border-dark);
+  background-color: var(--color-border-dark);
 }
-
 
 /* SCROLLBUTTON */
 
 #scroll-div {
-    margin: 30px 0px 46px 0px;
-    display: flex;
-    justify-content: center;
+  margin: 30px 0px 46px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .scroll-button {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    border: none;
-    outline: none;
-    /*border: 2px solid var(--color-border-dark);*/
-    background-color: var(--color-scroll-buton);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  /*border: 2px solid var(--color-border-dark);*/
+  background-color: var(--color-scroll-buton);
 }
 
-.scroll-button:hover{
-    filter: brightness(1.2);
+.scroll-button:hover {
+  filter: brightness(1.2);
 }
 
 .arrowdown {
-    border: solid rgb(255, 255, 255);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 5px;
-    transform: rotate(45deg);
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
 }
-
 
 /* INFO BOXES */
 
 #infoboxes {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 20px;
-    padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 20px;
+  padding-bottom: 50px;
 }
 
 .box {
-    margin: 20px;
-    border: 0px solid var(--color-medium);   
-    display: grid;
-    grid-template-rows: 15% 85%;
+  margin: 30px;
+  border: 0px solid var(--color-medium);
+  display: grid;
+  grid-template-rows: 10% 90%;
 }
 
 .boxtitle {
-    text-align: center;
-    font-size: 35px;
-    background-color: var(--color-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  text-align: center;
+  font-size: 35px;
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.announcement-element, .assignment-element {
-    display: grid;
-    align-items: center;
-    padding: 5px;
+.announcement-element,
+.assignment-element {
+  display: grid;
+  align-items: center;
 }
 
-.announcement-element, .assignment-element, .infobox-button {
-    cursor: pointer;
-    border: 0px solid  var(--color-border-light);
-    background-color:  var(--color-light);
-    margin-top: 2px;
+.announcement-element,
+.assignment-element,
+.infobox-button {
+  cursor: pointer;
+  border: 0px solid var(--color-border-light);
+  background-color: var(--color-light);
+  margin-top: 2px;
 }
 
 .infobox-button {
-    font-size: 22px;
-    background-color: var(--color-dark);
-    width: 100%;
-    height: 10%;
-    color: white;
+  font-size: 22px;
+  background-color: var(--color-dark);
+  width: 100%;
+  height: 10%;
+  color: white;
 }
 
-.assignment-element:hover, .announcement-element:hover, .infobox-button:hover{
-    filter: brightness(1.08);
+.assignment-element:hover,
+.announcement-element:hover,
+.infobox-button:hover {
+  filter: brightness(1.08);
 }
 
 .announcement-element {
-    grid-template-columns: 6% 49% 20% 25%;
+  grid-template-columns: 6% 49% 20% 25%;
 }
 
-.assignment-element{
-    grid-template-columns: 6% 49% 20% 25%;
+.assignment-element {
+  grid-template-columns: 6% 49% 20% 25%;
 }
 
 .dot {
-    margin: 12px;
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 12px;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dot-course1 {
-    background-color: var(--color-course1);
+  background-color: var(--color-course1);
 }
 
 .dot-course2 {
-    background-color: var(--color-course2);
+  background-color: var(--color-course2);
 }
 
 .dot-course3 {
-    background-color: var(--color-course3);
+  background-color: var(--color-course3);
 }
 
 .infobox-text2 {
-    text-align: right;
+  text-align: right;
 }
 
 .box p {
-    margin: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  margin: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
