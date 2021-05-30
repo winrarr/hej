@@ -140,13 +140,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 20px;
+    padding-bottom: 20px;
 }
 
 .box {
     margin: 20px;
     border: 0px solid var(--color-medium);   
-    padding: 5px;
-    height: auto;
     display: grid;
     grid-template-rows: 10% 90%;
 }
@@ -165,7 +164,6 @@
     display: grid;
     align-items: center;
     padding: 5px;
-    height: 8%;
 }
 
 .announcement-element, .assignment-element, .infobox-button {
@@ -227,5 +225,3 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-
