@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <link rel="stylesheet" href="course2styles.css">
-    <link rel="stylesheet" href="../coursepagestyles.css">
-    <link rel="stylesheet" href="../../generalstyles.css">
+    <link rel="stylesheet" href="coursepage.css">
+    <link rel="stylesheet" href="../general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../global.js"></script>
-    <script src="../coursedatascript.js"></script>
-    <script src="../coursepagescript.js"></script>
+    <script src="coursedata.js"></script>
+    <script src="coursepage.js"></script>
+    <script src="../navbar.js"></script>
+    <title>Computerarkitektur, Netværk og Operativsystemer</title>
 </head>
 <body>
     <div class="navbar">
-        <div onclick="location.href='../../frontpage.html'" class="logo">
+        <div onclick="location.href='/frontpage.html'" class="logo">
             Studerende.dk
         </div>
     
         <ul class="course-items">
-            <li class="course1" onclick="location.href='../course1/course1.html'">
+            <li class="compark" onclick="location.href='/courses/compark.html'">
                 <p>CompArk</p>
             </li>
-            <li class="course2" onclick="location.href='../course2/course2.html'">
+            <li class="linalg" onclick="location.href='/courses/linalg.html'">
                 <p>LinAlg</p>
             </li>
-            <li class="course3" onclick="location.href='../course3/course3.html'">
-                <p>EksSys</p>
+            <li class="exsys" onclick="location.href='/courses/exsys.html'">
+                <p>ExSys</p>
             </li>
         </ul>
 
@@ -43,7 +42,7 @@
     </div>
     
     <div class="coursepage">
-        <div class="sidenavcontainer">
+        <div class="linalg-sidenav">
             <div class="sidenav">  
                 <button id="default" onclick="displayCoursePlan(); highlight(this);">Course plan</button>
                 <button onclick="displayHandins(); highlight(this);">Handins</button>

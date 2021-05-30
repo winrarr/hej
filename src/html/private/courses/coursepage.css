@@ -170,3 +170,15 @@ body {
 #other-info button:hover {
     filter: brightness(1.2);
 }
+
+.compark-sidenav {
+    background-color: var(--color-compark);
+}
+
+.linalg-sidenav {
+    background-color: var(--color-linalg);
+}
+
+.exsys-sidenav {
+    background-color: var(--color-exsys);
+}

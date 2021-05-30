@@ -1,8 +1,0 @@
-.course2 {
-    border-bottom-width: 10px !important;
-    padding-top: 12px !important;
-}
-
-.sidenavcontainer, .sidenav {
-    background-color: var(--color-course2);
-}

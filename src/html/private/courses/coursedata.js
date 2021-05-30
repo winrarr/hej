@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', setup, false);
 
 var container;
-var url = 'https://vm23.exsys2021.cs.au.dk/api/'
 var courseabbr;
 var courseJSON;
 var handinJSONonly3;
@@ -12,8 +11,12 @@ var courseplanJSON;
 
 function setup() {
     container = document.getElementById("content-container");
-    courseabbr = getCourseAbbr();
+    courseabbr = window.location.pathname.split("/").pop().slice(0,-5)
     loadAllData();
+}
+
+function reset() {
+    container.innerHTML = "";
 }
 
 function formatDate(input) {
@@ -26,21 +29,6 @@ function formatDate2(input) {
     return datearray[2] + "/" + datearray[1] + "-" + datearray[0];
 }
 
-function getCourseAbbr(){
-    var path = window.location.pathname;
-    var page = path.split("/").pop();
-    var page = page.slice(0,-5); // remove .html from string
-    switch (page) {
-        case "course1":
-            return "CompArk";
-        case "course2":
-            return "LinAlg";
-        case "course3":
-            return "EksSys";
-    }
-    return null;
-}
-
 function loadAllData(){
     loadCoursePlan();
     loadCourseData();
@@ -51,46 +39,40 @@ function loadAllData(){
 }
 
 async function loadCourseData(){
-    url2 = url + 'courses?abbr=' + courseabbr;
-    let response = await fetch(url2);
+    let response = await fetch(`/api/courses?abbr=${courseabbr}`);
     let responseText = await response.text();
     responseText = responseText.substring(1,responseText.length-1);
     courseJSON = JSON.parse(responseText);
 }
 
 async function load3Announcements(){
-    url2 = url + 'announcements?course=' + courseabbr +'&amount=3';
-    let response = await fetch(url2);
+    let response = await fetch(`/api/announcements?course=${courseabbr}&amount=3`);
     let responseText = await response.text();
     announceJSONonly3 = JSON.parse(responseText);
     setupAnnouncementSidebar();
 }
 
 async function loadAllAnnouncements(){
-    url2 = url + 'announcements?course=' + courseabbr;
-    let response = await fetch(url2);
+    let response = await fetch(`/api/announcements?course=${courseabbr}`);
     let responseText = await response.text();
     announceJSONall = JSON.parse(responseText);
 }
 
 async function load3Handins(){
-    url2 = url + 'assignments?course=' + courseabbr +'&amount=3';
-    let response = await fetch(url2);
+    let response = await fetch(`/api/assignments?course=${courseabbr}&amount=3`);
     let responseText = await response.text();
     handinJSONonly3 = JSON.parse(responseText);
     setupHandinSidebar();
 }
 
 async function loadAllHandins(){
-    url2 = url + 'assignments?course=' + courseabbr;
-    let response = await fetch(url2);
+    let response = await fetch(`/api/assignments?course=${courseabbr}`);
     let responseText = await response.text();
     handinJSONall = JSON.parse(responseText);
 }
 
 async function loadCoursePlan(){
-    url2 = url + 'courseplan?course=' + courseabbr;
-    let response = await fetch(url2);
+    let response = await fetch(`/api/courseplan?course=${courseabbr}`);
     let responseText = await response.text();
     courseplanJSON = JSON.parse(responseText);
     displayCoursePlan();
@@ -115,7 +97,7 @@ function setupAnnouncementSidebar(){
 }
 
 function displayCoursePlan(){
-    ;
+    reset();
     string = `
     <table id='content-table'>
         <tr>
@@ -136,7 +118,7 @@ function displayCoursePlan(){
 }
 
 function displayHandins(){
-    ;
+    reset();
     string = `
     <div id="handins">
         <table id="handins-table">
@@ -157,7 +139,7 @@ function displayHandins(){
 }
 
 function displayAnnouncements(){
-    ;
+    reset();
     string = `
     <div id="announcements">
         <table id="announcements-table">
@@ -176,7 +158,7 @@ function displayAnnouncements(){
 }
 
 function displayRecordings(){
-    ;
+    reset();
     string = `
     <div id="recordings">
         <table id="recordings-table">
@@ -193,12 +175,12 @@ function displayRecordings(){
 }
 
 function displayCourseMaterial(){
-    ;
+    reset();
     container.innerHTML = courseJSON.materialtext;
 }
 
 function displayCourseSlides(){
-    ;
+    reset();
     string = `
     <div id="slides">
         <table id="slides-table">
@@ -217,7 +199,7 @@ function displayCourseSlides(){
 
 
 function displayOtherInfo(){
-    ;
+    reset();
     container.innerHTML = `
     <div id="other-info">
         <button onclick="otherInfoDisplayIntroduction()">Introduction to Course</button>
@@ -230,27 +212,27 @@ function displayOtherInfo(){
 }
 
 function otherInfoDisplayIntroduction(){
-    ;
+    reset();
     container.innerHTML = courseJSON.introtext;
 }
 function otherInfoDisplayTools(){
-    ;
+    reset();
     container.innerHTML = courseJSON.tooltext;
 } 
 function otherInfoDisplayGroups(){
-    ;
+    reset();
     container.innerHTML = courseJSON.grouptext;
 }
 function otherInfoDisplayExam(){
-    ;
+    reset();
     container.innerHTML = courseJSON.examtext;
 
 }
 function otherInfoDisplayContacts(){
-    ;
+    reset();
     container.innerHTML = courseJSON.contacttext;
 }
 function otherInfoDisplayEvaluation(){
-    ;
+    reset();
     container.innerHTML = courseJSON.evaltext;
 }

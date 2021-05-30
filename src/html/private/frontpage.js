@@ -94,14 +94,14 @@ function scrollWin(){
 function loadAllData(){
     fetch('/api/assignments?amount=8')
         .then(response => response.text())
-        .then(response => setupHandinSidebar(JSON.parse(response)))
+        .then(response => setupAssignmentBox(JSON.parse(response)))
 
     fetch('/api/announcements?amount=8')
         .then(response => response.text())
-        .then(response => setupAnnouncementSidebar(JSON.parse(response)))
+        .then(response => setupAnnouncementBox(JSON.parse(response)))
 }
 
-function setupHandinSidebar(text){
+function setupAssignmentBox(text){
     handincontainer = document.getElementById("handins");
     string = '<div class="boxtitle">Assignments</div><div>'
     for (i = 0; i < 8; i++) {
@@ -136,7 +136,7 @@ function setupHandinSidebar(text){
     handincontainer.innerHTML = string;
 }
 
-function setupAnnouncementSidebar(text){
+function setupAnnouncementBox(text){
     announcecontainer = document.getElementById("announcements");
     string = '<div class="boxtitle">Announcements</div><div>'
     for (i = 0; i < 8; i++) {

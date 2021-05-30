@@ -1,12 +1,12 @@
 :root {
     --color-navbar: #243c64;
 
-    --color-course1: hsl(0, 70%, 50%);
-    --color-course2: hsl(130, 70%, 50%);
-    --color-course3: hsl(44, 70%, 50%);
-    --color-course1-highlight: hsl(0, 50%, 50%);
-    --color-course2-highlight: hsl(130, 50%, 50%);
-    --color-course3-highlight: #bf9d40;
+    --color-compark: hsl(0, 70%, 50%);
+    --color-linalg: hsl(130, 70%, 50%);
+    --color-exsys: hsl(44, 70%, 50%);
+    --color-compark-highlight: hsl(0, 50%, 50%);
+    --color-linalg-highlight: hsl(130, 50%, 50%);
+    --color-exsys-highlight: #bf9d40;
     
     --color-bck: #e3e5e9;
     --color-dark: #243c64;
@@ -95,16 +95,16 @@ body {
     color: white;
 }
 
-.course1 {
-    border-bottom-color: var(--color-course1);
+.compark {
+    border-bottom-color: var(--color-compark);
 }
 
-.course2 {
-    border-bottom-color: var(--color-course2);
+.linalg {
+    border-bottom-color: var(--color-linalg);
 }
 
-.course3 {
-    border-bottom-color: var(--color-course3);
+.exsys {
+    border-bottom-color: var(--color-exsys);
 }
 
 
