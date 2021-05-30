@@ -140,14 +140,13 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 20px;
-    height: 700px;
 }
 
 .box {
     margin: 20px;
     border: 0px solid var(--color-medium);   
     padding: 5px;
-    height: 75vh;
+    height: 700px;
     display: grid;
     grid-template-rows: 10% 90%;
 }
@@ -165,7 +164,7 @@
 .announcement-element, .assignment-element {
     display: grid;
     align-items: center;
-    height: 8%;
+    height: 10%;
 }
 
 .announcement-element, .assignment-element, .infobox-button {
