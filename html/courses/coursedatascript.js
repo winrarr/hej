@@ -101,7 +101,7 @@ async function loadCoursePlan(){
 
 function setupHandinSidebar(){
     handincontainer = document.getElementById("handins");
-    string = '<p>Handins</p>'
+    string = '<p>Assignments</p>'
     for (i = 0; i < 3; i++) {
         string = string + '<div onclick="displayHandins()">' + handinJSONonly3[i].title + ' ' + formatDate(handinJSONonly3[i].deadline) + '</div>'
     }
