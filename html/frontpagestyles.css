@@ -147,7 +147,7 @@
     margin: 20px;
     border: 0px solid var(--color-medium);   
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 15% 85%;
 }
 
 .boxtitle {
@@ -177,7 +177,7 @@
     font-size: 22px;
     background-color: var(--color-dark);
     width: 100%;
-    height: 7%;
+    height: 10%;
     color: white;
 }
 
