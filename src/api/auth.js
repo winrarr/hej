@@ -16,7 +16,7 @@ function auth(req, res, next) {
         sessions.set(session, Date.now())
         next()
     } else {
-        res.sendFile(path.join(__dirname, '../html/public/index.html'));
+        res.redirect('/')
     }
 }
 
@@ -35,11 +35,11 @@ function addSession() {
 
 setInterval(() => {
     sessions.forEach((value, key) => {
-        if (Date.now() - value > 60*60*1000) {
+        if (Date.now() - value > 1000*60*60) {
             sessions.delete(key)
         }
     })
-}, 1000*60*30);
+}, 1000*60*60);
 
 
 module.exports = {

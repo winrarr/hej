@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "studerende",
+            "database": "C:\\Users\\rasmu\\Documents\\webdev\\login-app\\api\\database\\studerende.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
