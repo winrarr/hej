@@ -75,7 +75,7 @@ function removeActiveButton(parent) {
 //scroll to box
 
 function scrollWin(){
-    let infoboxes = document.getElementById("infoboxes");
+    let infoboxes = document.getElementById("footer");
     infoboxes.scrollIntoView({behavior: "smooth"});
 }
 

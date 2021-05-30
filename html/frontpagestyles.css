@@ -140,7 +140,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .box {
