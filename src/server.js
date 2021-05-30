@@ -1,6 +1,6 @@
 const express = require("express")
 const cors = require("cors")
-const auth = require('./auth').routes
+const auth = require('./api/auth').routes
 const app = express()
 
 app.use(cors())
@@ -9,10 +9,11 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-app.use(express.static("../html/public"))
-app.use("/api", require("./routes/api.js"))
+app.use(express.static("./html/public"))
+app.use("/api/admin", require("./api/routes/admin"))
 app.use(auth)
-app.use(express.static("../html/private"))
+app.use(express.static("./html/private"))
+app.use("/api", require("./api/routes/api"))
 
 app.use((req, res) => {
     res.status(404).send()

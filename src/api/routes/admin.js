@@ -24,7 +24,14 @@ routes.get("/sessions", (req, res) => {
 })
 
 routes.get("/sql", (req, res) => {
-    db.all(req.query.query, (err, rows) => res.send(rows))
+    db.all(req.query.query, (err, rows) => {
+        if (err) {
+            console.log(err)
+            res.send(err)
+        } else {
+            res.send(rows)
+        }
+    })
 })
 
 

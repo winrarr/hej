@@ -1,4 +1,4 @@
-var sessions = ['admin']
+var sessions = new Map([["admin", Number.MAX_SAFE_INTEGER]])
 const path = require('path')
 const routes = require('express').Router()
 const crypto = require('crypto')
@@ -22,19 +22,20 @@ routes.post("/register", (req, res) => {
 })
 
 routes.post("/logout", (req, res) => {
-    removeSession(getSession(req.headers.cookie))
+    sessions.delete(getSessionFromCookie(req.headers.cookie))
 })
 
 function auth(req, res, next) {
-    let s = getSession(req.headers.cookie)
-    if (sessions.includes(s)) {
+    let session = getSessionFromCookie(req.headers.cookie)
+    if (sessions.has(session)) {
+        sessions.set(session, Date.now())
         next()
     } else {
         res.sendFile(path.join(__dirname, '../html/public/index.html'));
     }
 }
 
-function getSession(cookie) {
+function getSessionFromCookie(cookie) {
     var match = cookie.match('(^| )session=([^;]+)');
     if (match) return match[2];
   }
@@ -42,14 +43,19 @@ function getSession(cookie) {
 routes.use(auth)
 
 function addSession() {
-    const session = crypto.randomBytes(32).toString('hex')
-    sessions.push(session)
+    const session = crypto.randomBytes(20).toString('hex') + Date.now()
+    sessions.set(session, Date.now())
     return session
 }
 
-function removeSession(session) {
-    sessions.splice(sessions.indexOf(session), 1)
-}
+setInterval(() => {
+    sessions.forEach((value, key) => {
+        if (Date.now() - value > 60*60*1000) {
+            sessions.delete(key)
+        }
+    })
+}, 1000*60*30);
+
 
 module.exports = {
     routes: routes,
