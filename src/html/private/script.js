@@ -16,52 +16,36 @@ function formatDate2(input) {
 
 function addCalendar() {
     let calendar = document.getElementById("calendar");
-
-    let element = document.createElement("div")
-    element.innerHTML = "WEEK " + today.getWeek()
-    element.classList.add("calendar-table-header")
-
-    let days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
-    for (let i = 0; i < 7; i++) {
-        let element = document.createElement("div")
-
-    }
-
-    let today = new Date()
-    let day = today.getDay();
-    if (day == 0) {day = 7;} // sunday is 0 in getDay()
+    let day = new Date().getDay();
+    if (day == 0) {day = 7;}//sunday is 0 in getDay()
     let currentDay = calendar.children[day];
     currentDay.classList.add("today");
     
     for (let i = 0; i < 8*(17-8); i++) {
-        let element = document.createElement("div");
+        var element = document.createElement("div");
+        element.innerHTML = "Test";
         if (i % 8 == 0) {
             let time = i / 8 + 8;
             element.innerHTML = ("0" + time).slice(-2) + " - " + ("0" + (time+1)).slice(-2);
+            element.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--color-border-dark");
             element.classList.add("calendar-table-header");
+        } else {
+            if (i == 1 || i == 10) {
+                element.style.backgroundColor = "#bf4040";
+                element.classList.add("calendar-table-item")
+            } else if (i == 19 || i == 28 || i == 37) {
+                element.style.backgroundColor = "#bf9d40";
+                element.classList.add("calendar-table-item")
+            } else if (i == 46 || i == 55) {
+                element.style.backgroundColor = "#1a9c30";
+                element.classList.add("calendar-table-item")
+            } else {
+                element.innerHTML = "&nbsp;";
+                element.classList.add("calendar-table-item");   
+            }
         }
-
         calendar.appendChild(element);
     }
-}
-
-Date.prototype.getWeek = function() {
-    var date = new Date(this.getTime());
-    date.setHours(0, 0, 0, 0);
-    // Thursday in current week decides the year.
-    date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
-    // January 4 is always in week 1.
-    var week1 = new Date(date.getFullYear(), 0, 4);
-    // Adjust to Thursday in week 1 and count number of weeks from date to week1.
-    return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
-                          - 3 + (week1.getDay() + 6) % 7) / 7);
-}
-
-Date.prototype.GetFirstDayOfWeek = function() {
-    return (new Date(this.setDate(this.getDate() - this.getDay() + (this.getDay() == 0 ? -6:1))));
-}
-Date.prototype.GetLastDayOfWeek = function() {
-    return (new Date(this.setDate(this.getDate() - this.getDay() + 7)));
 }
 
 
