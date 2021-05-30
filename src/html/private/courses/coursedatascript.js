@@ -16,10 +16,6 @@ function setup() {
     loadAllData();
 }
 
-function reset() {
-    container.innerHTML = "";
-}
-
 function formatDate(input) {
     var datearray = input.split("-");
     return "(" + datearray[2] + "/" + datearray[1] + ")";
@@ -44,6 +40,7 @@ function getCourseAbbr(){
     }
     return null;
 }
+
 function loadAllData(){
     loadCoursePlan();
     loadCourseData();
@@ -118,7 +115,7 @@ function setupAnnouncementSidebar(){
 }
 
 function displayCoursePlan(){
-    reset();
+    ;
     string = `
     <table id='content-table'>
         <tr>
@@ -139,7 +136,7 @@ function displayCoursePlan(){
 }
 
 function displayHandins(){
-    reset();
+    ;
     string = `
     <div id="handins">
         <table id="handins-table">
@@ -160,7 +157,7 @@ function displayHandins(){
 }
 
 function displayAnnouncements(){
-    reset();
+    ;
     string = `
     <div id="announcements">
         <table id="announcements-table">
@@ -179,7 +176,7 @@ function displayAnnouncements(){
 }
 
 function displayRecordings(){
-    reset();
+    ;
     string = `
     <div id="recordings">
         <table id="recordings-table">
@@ -196,12 +193,12 @@ function displayRecordings(){
 }
 
 function displayCourseMaterial(){
-    reset();
+    ;
     container.innerHTML = courseJSON.materialtext;
 }
 
 function displayCourseSlides(){
-    reset();
+    ;
     string = `
     <div id="slides">
         <table id="slides-table">
@@ -220,7 +217,7 @@ function displayCourseSlides(){
 
 
 function displayOtherInfo(){
-    reset();
+    ;
     container.innerHTML = `
     <div id="other-info">
         <button onclick="otherInfoDisplayIntroduction()">Introduction to Course</button>
@@ -233,27 +230,27 @@ function displayOtherInfo(){
 }
 
 function otherInfoDisplayIntroduction(){
-    reset();
+    ;
     container.innerHTML = courseJSON.introtext;
 }
 function otherInfoDisplayTools(){
-    reset();
+    ;
     container.innerHTML = courseJSON.tooltext;
 } 
 function otherInfoDisplayGroups(){
-    reset();
+    ;
     container.innerHTML = courseJSON.grouptext;
 }
 function otherInfoDisplayExam(){
-    reset();
+    ;
     container.innerHTML = courseJSON.examtext;
 
 }
 function otherInfoDisplayContacts(){
-    reset();
+    ;
     container.innerHTML = courseJSON.contacttext;
 }
 function otherInfoDisplayEvaluation(){
-    reset();
+    ;
     container.innerHTML = courseJSON.evaltext;
 }

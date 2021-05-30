@@ -1,8 +1,6 @@
 var sessions = new Map([["admin", Number.MAX_SAFE_INTEGER]])
-const path = require('path')
 const routes = require('express').Router()
 const crypto = require('crypto')
-const db = require('./database/database')
 
 routes.post("/login", (req, res) => res.send(addSession()))
 
