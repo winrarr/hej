@@ -131,8 +131,8 @@ function setupHandinSidebar(){
         
     }
     string = string + `
-        <button type="button" class="infobox-button" onclick="alert('Goto All Handins');">
-            All Handins
+        <button type="button" class="infobox-button" onclick="alert('Goto All Assignments');">
+            All Assignments
         </button>
     </div>
     `;
