@@ -83,9 +83,6 @@ function removeActiveButton(parent) {
       }
 }
 
-
-//scroll to box
-
 function scrollWin(){
     let infoboxes = document.getElementById("infoboxes");
     infoboxes.scrollIntoView({behavior: "smooth"});
@@ -105,19 +102,7 @@ function setupAssignmentBox(text){
     handincontainer = document.getElementById("handins");
     string = '<div class="boxtitle">Assignments</div><div>'
     for (i = 0; i < 8; i++) {
-        string = string + `<div onclick="alert('`+text[i].description+`');" class="announcement-element">`;
-
-        switch (text[i].courseabbr) {
-            case "EksSys":
-                string = string + '<span class="dot dot-course3">';
-                break;
-            case "LinAlg":
-                string = string + '<span class="dot dot-course2">';
-                break;
-            case "CompArk":
-                string = string + '<span class="dot dot-course1">';
-                break;
-        }
+        string = string + `<div onclick="alert('${text[i].description}');" class="announcement-element"><span class="dot dot-${text[i].courseabbr.toLowerCase()}">`;
 
         string = string + text[i].courseabbr.charAt(0) + "</span>" + `
             <p class="infobox-text">` + text[i].title + `</p>
@@ -140,19 +125,7 @@ function setupAnnouncementBox(text){
     announcecontainer = document.getElementById("announcements");
     string = '<div class="boxtitle">Announcements</div><div>'
     for (i = 0; i < 8; i++) {
-        string = string + `<div onclick="alert('`+text[i].text+`');" class="announcement-element">`;
-
-        switch (text[i].courseabbr) {
-            case "EksSys":
-                string = string + '<span class="dot dot-course3">';
-                break;
-            case "LinAlg":
-                string = string + '<span class="dot dot-course2">';
-                break;
-            case "CompArk":
-                string = string + '<span class="dot dot-course1">';
-                break;
-        }
+        string = string + `<div onclick="alert('${text[i].description}');" class="announcement-element"><span class="dot dot-${text[i].courseabbr.toLowerCase()}">`;
 
         string = string + text[i].courseabbr.charAt(0) + "</span>" + `
             <p class="infobox-text">` + text[i].title + `</p>

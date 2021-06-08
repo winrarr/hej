@@ -205,16 +205,16 @@
     align-items: center;
 }
 
-.dot-course1 {
-    background-color: var(--color-course1);
+.dot-compark {
+    background-color: var(--color-compark);
 }
 
-.dot-course2 {
-    background-color: var(--color-course2);
+.dot-linalg {
+    background-color: var(--color-linalg);
 }
 
-.dot-course3 {
-    background-color: var(--color-course3);
+.dot-exsys {
+    background-color: var(--color-exsys);
 }
 
 .infobox-text2 {
