@@ -80,7 +80,7 @@ async function loadCoursePlan(){
 
 function setupHandinSidebar(){
     handincontainer = document.getElementById("handins");
-    string = '<p>Handins</p>'
+    string = '<p>Assignments</p>'
     for (i = 0; i < 3; i++) {
         string = string + '<div onclick="displayHandins()">' + handinJSONonly3[i].title + ' ' + formatDate(handinJSONonly3[i].deadline) + '</div>'
     }
@@ -157,53 +157,17 @@ function displayAnnouncements(){
     container.innerHTML = string;;
 }
 
-function displayRecordings(){
-    reset();
-    string = `
-    <div id="recordings">
-        <table id="recordings-table">
-            <tr>
-                <th>Lecture</th>
-                <th>Recording</th>
-            </tr>
-    `
-    for(i = 0; i<courseplanJSON.length;i++) {
-        string = string + "<tr><td>" + courseplanJSON[i].lecturename + `</td><td><button onclick="alert('Open Recording :(');">` + courseplanJSON[i].recordinglink + "</button></td></tr>";
-    }
-    string = string + "</table></div>";
-    container.innerHTML = string;
-}
-
 function displayCourseMaterial(){
     reset();
     container.innerHTML = courseJSON.materialtext;
 }
-
-function displayCourseSlides(){
-    reset();
-    string = `
-    <div id="slides">
-        <table id="slides-table">
-            <tr>
-                <th>Lecture</th>
-                <th>Slides</th>
-            </tr>
-    `
-    for(i = 0; i<courseplanJSON.length;i++) {
-        string = string + "<tr><td>" + courseplanJSON[i].lecturename + `</td><td><button onclick="alert('Open Slide :(');">` + courseplanJSON[i].slideslink + "</button></td></tr>";
-    }
-    string = string + "</table></div>";
-    container.innerHTML = string;;
-
-}
-
 
 function displayOtherInfo(){
     reset();
     container.innerHTML = `
     <div id="other-info">
         <button onclick="otherInfoDisplayIntroduction()">Introduction to Course</button>
-        <button onclick="otherInfoDisplayTools()">Tools</button>
+        <button onclick="otherInfoDisplaySoftware()">Software</button>
         <button onclick="otherInfoDisplayGroups()">Groups</button>
         <button onclick="otherInfoDisplayExam()">Exam</button>
         <button onclick="otherInfoDisplayContacts()">Contacts</button>
@@ -215,7 +179,7 @@ function otherInfoDisplayIntroduction(){
     reset();
     container.innerHTML = courseJSON.introtext;
 }
-function otherInfoDisplayTools(){
+function otherInfoDisplaySoftware(){
     reset();
     container.innerHTML = courseJSON.tooltext;
 } 
